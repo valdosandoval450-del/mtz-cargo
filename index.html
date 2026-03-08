@@ -1,48 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Martínez Cargo LLC | Flatbed • Gooseneck • Logistics</title>
-  <meta name="description" content="Martínez Cargo LLC. Transporte profesional en Houston, TX. Flatbed, gooseneck, logística, amarre seguro y entregas puntuales." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MTZ Cargo LLC | Flatbed • Gooseneck • Transportation & Logistics</title>
+  <meta name="description" content="MTZ Cargo LLC. Transporte profesional desde Houston, Texas. Flatbed, Gooseneck, logística, carga segura, entregas puntuales y atención directa." />
 
   <style>
     :root{
-      --bg:#08101b;
-      --bg2:#0c1624;
-      --card:rgba(10,18,30,.72);
-      --line:rgba(148,163,184,.14);
-      --text:#e8edf5;
-      --muted:#9aa8bb;
-      --brand:#22c55e;
-      --brand2:#16a34a;
-      --shadow:0 24px 70px rgba(0,0,0,.34);
-      --radius:22px;
-      --max:1200px;
+      --bg:#060b14;
+      --bg-soft:#0c1422;
+      --card:rgba(10,18,32,.78);
+      --line:rgba(255,255,255,.08);
+      --text:#f3f7fb;
+      --muted:#9fb0c4;
+      --brand:#39e06f;
+      --brand-dark:#16a34a;
+      --shadow:0 30px 80px rgba(0,0,0,.40);
+      --radius:24px;
+      --max:1220px;
     }
 
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
       margin:0;
-      font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color:var(--text);
       background:
-        radial-gradient(900px 400px at 10% -10%, rgba(34,197,94,.14), transparent 55%),
-        radial-gradient(800px 400px at 100% 0%, rgba(59,130,246,.10), transparent 48%),
-        linear-gradient(180deg, #050811 0%, var(--bg) 100%);
+        radial-gradient(900px 420px at 10% -10%, rgba(57,224,111,.14), transparent 58%),
+        radial-gradient(850px 380px at 100% 0%, rgba(59,130,246,.10), transparent 50%),
+        linear-gradient(180deg, #04070d 0%, var(--bg) 100%);
     }
 
-    img{display:block; max-width:100%}
-    a{text-decoration:none; color:inherit}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 24px}
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 24px;
+    }
 
     .nav{
       position:sticky;
       top:0;
-      z-index:50;
+      z-index:80;
       backdrop-filter:blur(14px);
-      background:rgba(5,8,17,.68);
+      background:rgba(4,7,13,.72);
       border-bottom:1px solid var(--line);
     }
 
@@ -64,29 +69,31 @@
     }
 
     .logo{
-      width:46px;
-      height:46px;
-      border-radius:15px;
+      width:48px;
+      height:48px;
+      border-radius:16px;
+      background:linear-gradient(135deg, #66ff99, #39e06f 55%, #15803d);
+      color:#03210d;
+      font-weight:900;
+      font-size:18px;
       display:grid;
       place-items:center;
-      font-weight:900;
-      color:#04110a;
-      background:linear-gradient(135deg, #4ade80, #22c55e 55%, #15803d);
-      box-shadow:0 14px 30px rgba(34,197,94,.24);
+      box-shadow:0 18px 35px rgba(57,224,111,.25);
       flex:0 0 auto;
     }
 
     .brand-text .top{
       font-size:15px;
       font-weight:900;
-      line-height:1.1;
+      line-height:1.05;
+      letter-spacing:.2px;
     }
 
     .brand-text .sub{
       margin-top:3px;
       font-size:12px;
-      font-weight:700;
       color:var(--muted);
+      font-weight:700;
     }
 
     .navlinks{
@@ -105,8 +112,14 @@
     }
 
     .navlinks a:hover{
-      background:rgba(148,163,184,.08);
+      background:rgba(255,255,255,.05);
       color:var(--text);
+    }
+
+    .nav-actions{
+      display:flex;
+      align-items:center;
+      gap:10px;
     }
 
     .btn{
@@ -114,12 +127,12 @@
       align-items:center;
       justify-content:center;
       gap:10px;
-      padding:12px 16px;
+      padding:13px 18px;
       border-radius:14px;
       font-weight:900;
       border:1px solid transparent;
       cursor:pointer;
-      transition:transform .15s ease, filter .15s ease, background .15s ease;
+      transition:transform .16s ease, filter .16s ease, background .16s ease;
       white-space:nowrap;
     }
 
@@ -129,13 +142,13 @@
     }
 
     .btn.primary{
+      background:linear-gradient(135deg, var(--brand), var(--brand-dark));
       color:#04110a;
-      background:linear-gradient(135deg, var(--brand), var(--brand2));
-      box-shadow:0 16px 40px rgba(34,197,94,.22);
+      box-shadow:0 18px 40px rgba(57,224,111,.20);
     }
 
     .btn.secondary{
-      background:rgba(148,163,184,.08);
+      background:rgba(255,255,255,.04);
       color:var(--text);
       border-color:var(--line);
     }
@@ -147,22 +160,22 @@
     }
 
     .hero{
-      padding:42px 0 26px;
+      padding:38px 0 30px;
       display:grid;
-      grid-template-columns:1.04fr .96fr;
+      grid-template-columns:1.02fr .98fr;
       gap:28px;
       align-items:stretch;
     }
 
     .eyebrow{
       display:inline-flex;
-      flex-wrap:wrap;
-      gap:10px;
       align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
       padding:10px 14px;
       border-radius:999px;
       border:1px solid var(--line);
-      background:rgba(148,163,184,.06);
+      background:rgba(255,255,255,.04);
       color:var(--muted);
       font-size:13px;
       font-weight:800;
@@ -171,29 +184,29 @@
     .eyebrow b{color:var(--text)}
 
     h1{
-      margin:16px 0 12px;
-      font-size:52px;
-      line-height:.98;
-      letter-spacing:-1.3px;
+      margin:16px 0 14px;
+      font-size:58px;
+      line-height:.96;
+      letter-spacing:-1.6px;
       max-width:720px;
     }
 
     .lead{
       margin:0;
-      max-width:690px;
+      max-width:700px;
       color:var(--muted);
       font-size:17px;
-      line-height:1.78;
+      line-height:1.8;
     }
 
     .cta{
-      margin-top:24px;
+      margin-top:26px;
       display:flex;
       flex-wrap:wrap;
       gap:12px;
     }
 
-    .stats{
+    .hero-stats{
       margin-top:24px;
       display:grid;
       grid-template-columns:repeat(3,1fr);
@@ -208,22 +221,23 @@
       overflow:hidden;
     }
 
-    .pad{padding:20px}
+    .pad{padding:22px}
 
-    .stat .label{
+    .stat .k{
       color:var(--muted);
       font-size:13px;
       font-weight:800;
       margin-bottom:8px;
     }
 
-    .stat .value{
-      font-size:19px;
+    .stat .v{
+      font-size:20px;
       font-weight:900;
-      margin-bottom:6px;
+      margin-bottom:8px;
+      line-height:1.15;
     }
 
-    .stat .small{
+    .stat .s{
       color:var(--muted);
       font-size:13px;
       font-weight:700;
@@ -232,14 +246,15 @@
 
     .hero-media{
       position:relative;
-      min-height:510px;
-      border-radius:28px;
+      min-height:560px;
+      border-radius:30px;
       overflow:hidden;
       border:1px solid var(--line);
       box-shadow:var(--shadow);
       background:
-        linear-gradient(180deg, rgba(7,10,18,.10), rgba(7,10,18,.76)),
-        url("20260218_071704.jpg") center center / cover no-repeat;
+        linear-gradient(180deg, rgba(4,7,13,.10), rgba(4,7,13,.72)),
+        url("1000088208.jpg") center center / cover no-repeat;
+      isolation:isolate;
     }
 
     .hero-media::before{
@@ -247,8 +262,24 @@
       position:absolute;
       inset:0;
       background:
-        radial-gradient(900px 300px at 15% 0%, rgba(34,197,94,.20), transparent 55%),
-        linear-gradient(180deg, rgba(7,10,18,.04), rgba(7,10,18,.82));
+        radial-gradient(900px 300px at 18% 0%, rgba(57,224,111,.18), transparent 58%),
+        linear-gradient(180deg, rgba(5,9,16,.06), rgba(5,9,16,.80));
+      z-index:0;
+    }
+
+    .hero-badge{
+      position:absolute;
+      top:18px;
+      left:18px;
+      z-index:2;
+      padding:10px 12px;
+      border-radius:999px;
+      background:rgba(0,0,0,.32);
+      border:1px solid rgba(255,255,255,.12);
+      backdrop-filter:blur(8px);
+      font-size:12px;
+      font-weight:900;
+      color:#eaf2fb;
     }
 
     .hero-overlay{
@@ -257,23 +288,23 @@
       right:18px;
       bottom:18px;
       z-index:2;
-      padding:18px;
-      border-radius:18px;
-      background:rgba(7,10,18,.58);
+      padding:20px;
+      border-radius:20px;
+      background:rgba(6,11,20,.56);
       border:1px solid rgba(255,255,255,.10);
-      backdrop-filter:blur(10px);
+      backdrop-filter:blur(12px);
     }
 
     .hero-overlay .topline{
-      font-size:14px;
+      font-size:15px;
       font-weight:900;
       margin-bottom:8px;
     }
 
     .hero-overlay .desc{
-      color:#d3dbe7;
+      color:#d4deea;
       font-size:13px;
-      line-height:1.55;
+      line-height:1.6;
       font-weight:700;
     }
 
@@ -285,12 +316,12 @@
       align-items:flex-end;
       gap:18px;
       flex-wrap:wrap;
-      margin-bottom:16px;
+      margin-bottom:18px;
     }
 
     .section-head h2{
       margin:0;
-      font-size:30px;
+      font-size:31px;
       letter-spacing:-.6px;
     }
 
@@ -298,7 +329,7 @@
       margin:0;
       max-width:760px;
       color:var(--muted);
-      line-height:1.68;
+      line-height:1.7;
     }
 
     .trust{
@@ -308,10 +339,10 @@
     }
 
     .mini{
-      padding:18px;
-      border-radius:18px;
+      padding:20px;
+      border-radius:20px;
       border:1px solid var(--line);
-      background:rgba(148,163,184,.05);
+      background:rgba(255,255,255,.03);
       text-align:center;
       font-weight:900;
       color:var(--text);
@@ -319,13 +350,53 @@
 
     .mini span{
       display:block;
-      margin-top:6px;
+      margin-top:8px;
       color:var(--muted);
       font-size:13px;
       font-weight:700;
+      line-height:1.5;
     }
 
-    .two{
+    .why{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+
+    .why-card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:24px;
+      box-shadow:var(--shadow);
+      padding:24px;
+    }
+
+    .why-icon{
+      width:48px;
+      height:48px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg, rgba(57,224,111,.20), rgba(57,224,111,.08));
+      border:1px solid rgba(57,224,111,.18);
+      font-size:22px;
+      margin-bottom:16px;
+    }
+
+    .why-card h3{
+      margin:0 0 10px;
+      font-size:20px;
+    }
+
+    .why-card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.7;
+      font-weight:700;
+      font-size:14px;
+    }
+
+    .split{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:16px;
@@ -338,16 +409,16 @@
       padding:8px 10px;
       border-radius:999px;
       border:1px solid var(--line);
-      background:rgba(148,163,184,.06);
+      background:rgba(255,255,255,.04);
       color:var(--muted);
-      font-size:12px;
       font-weight:900;
+      font-size:12px;
     }
 
     ul.clean{
+      list-style:none;
       margin:14px 0 0;
       padding:0;
-      list-style:none;
       display:grid;
       gap:12px;
     }
@@ -359,16 +430,16 @@
       padding:14px;
       border-radius:16px;
       border:1px solid var(--line);
-      background:rgba(148,163,184,.04);
+      background:rgba(255,255,255,.03);
     }
 
     .dot{
       width:10px;
       height:10px;
       border-radius:999px;
-      margin-top:6px;
       background:var(--brand);
-      box-shadow:0 10px 20px rgba(34,197,94,.25);
+      box-shadow:0 8px 18px rgba(57,224,111,.28);
+      margin-top:6px;
       flex:0 0 auto;
     }
 
@@ -380,9 +451,31 @@
 
     .muted{
       color:var(--muted);
-      line-height:1.56;
+      line-height:1.55;
       font-size:14px;
       font-weight:700;
+    }
+
+    .fleet-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:16px;
+    }
+
+    .fleet-photo{
+      min-height:420px;
+      border-radius:24px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      background:
+        linear-gradient(180deg, rgba(5,9,16,.10), rgba(5,9,16,.55)),
+        url("7e39f5cc-c442-44bf-894d-0c9c674d460e-1_all_11234.jpg") center center / cover no-repeat;
+    }
+
+    .fleet-panel{
+      display:grid;
+      gap:16px;
     }
 
     .gallery{
@@ -393,12 +486,12 @@
 
     .g{
       position:relative;
-      border-radius:20px;
+      border-radius:22px;
       overflow:hidden;
       border:1px solid var(--line);
-      background:#0a1525;
+      background:#0b1524;
       box-shadow:var(--shadow);
-      min-height:230px;
+      min-height:240px;
       cursor:pointer;
     }
 
@@ -406,8 +499,8 @@
       width:100%;
       height:100%;
       object-fit:cover;
-      transition:transform .30s ease, filter .30s ease;
-      filter:contrast(1.03) saturate(1.06);
+      transition:transform .3s ease, filter .3s ease;
+      filter:contrast(1.03) saturate(1.05);
     }
 
     .g:hover img{
@@ -419,7 +512,7 @@
       content:"";
       position:absolute;
       inset:0;
-      background:linear-gradient(180deg, transparent 50%, rgba(0,0,0,.70));
+      background:linear-gradient(180deg, transparent 48%, rgba(0,0,0,.72));
       pointer-events:none;
     }
 
@@ -443,7 +536,7 @@
     .cap span{
       font-size:12px;
       font-weight:900;
-      color:rgba(232,237,245,.78);
+      color:rgba(243,247,251,.76);
       text-align:right;
     }
 
@@ -452,13 +545,13 @@
     .span-4{grid-column:span 4}
     .span-6{grid-column:span 6}
 
-    .coverage-grid{
+    .quote{
       display:grid;
-      grid-template-columns:1.15fr .85fr;
+      grid-template-columns:1fr .95fr;
       gap:16px;
     }
 
-    .contact{
+    .contact-grid{
       display:grid;
       grid-template-columns:1fr .95fr;
       gap:16px;
@@ -469,17 +562,40 @@
       font-weight:900;
       text-decoration:underline;
       text-underline-offset:3px;
-      text-decoration-color:rgba(34,197,94,.55);
+      text-decoration-color:rgba(57,224,111,.55);
       word-break:break-word;
+    }
+
+    .quote-banner{
+      position:relative;
+      min-height:280px;
+      border-radius:24px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      background:
+        linear-gradient(180deg, rgba(5,9,16,.18), rgba(5,9,16,.74)),
+        url("7e39f5cc-c442-44bf-894d-0c9c674d460e-1_all_27394.jpg") center center / cover no-repeat;
+    }
+
+    .quote-banner .overlay{
+      position:absolute;
+      inset:auto 18px 18px 18px;
+      padding:18px;
+      border-radius:18px;
+      background:rgba(6,11,20,.56);
+      border:1px solid rgba(255,255,255,.10);
+      backdrop-filter:blur(10px);
     }
 
     .footer{
       margin-top:10px;
-      padding:28px 0 50px;
+      padding:30px 0 54px;
       border-top:1px solid var(--line);
       color:var(--muted);
       font-size:13px;
       font-weight:700;
+      text-align:center;
     }
 
     .wa-float{
@@ -493,10 +609,10 @@
       padding:12px 14px;
       border-radius:16px;
       border:1px solid rgba(255,255,255,.10);
-      background:rgba(10,18,30,.82);
+      background:rgba(10,18,32,.84);
       backdrop-filter:blur(10px);
       box-shadow:0 24px 70px rgba(0,0,0,.45);
-      transition:transform .15s ease;
+      transition:transform .16s ease;
     }
 
     .wa-float:hover{transform:translateY(-1px)}
@@ -506,15 +622,19 @@
       height:12px;
       border-radius:999px;
       background:var(--brand);
-      box-shadow:0 10px 20px rgba(34,197,94,.25);
+      box-shadow:0 10px 20px rgba(57,224,111,.28);
       flex:0 0 auto;
     }
 
-    .wa-float b{display:block; font-size:14px}
+    .wa-float b{
+      display:block;
+      font-size:14px;
+    }
+
     .wa-float span{
       display:block;
       font-size:12px;
-      color:rgba(232,237,245,.76);
+      color:rgba(243,247,251,.76);
       font-weight:800;
     }
 
@@ -524,7 +644,7 @@
       z-index:999;
       display:none;
       place-items:center;
-      background:rgba(0,0,0,.80);
+      background:rgba(0,0,0,.82);
       backdrop-filter:blur(6px);
       padding:20px;
     }
@@ -535,10 +655,10 @@
       width:min(1120px,96vw);
       position:relative;
       overflow:hidden;
-      border-radius:20px;
+      border-radius:22px;
       border:1px solid rgba(255,255,255,.10);
-      background:rgba(10,18,30,.96);
-      box-shadow:0 30px 90px rgba(0,0,0,.55);
+      background:rgba(10,18,32,.96);
+      box-shadow:0 30px 90px rgba(0,0,0,.58);
     }
 
     .lb-card img{
@@ -568,7 +688,7 @@
       border-radius:999px;
       border:1px solid rgba(255,255,255,.12);
       background:rgba(0,0,0,.35);
-      color:#e8edf5;
+      color:#edf5ff;
       font-size:12px;
       font-weight:900;
     }
@@ -584,108 +704,123 @@
       cursor:pointer;
     }
 
-    @media (max-width: 980px){
+    @media (max-width: 1040px){
       .hero,
-      .two,
-      .coverage-grid,
-      .contact{
+      .fleet-grid,
+      .split,
+      .quote,
+      .contact-grid{
         grid-template-columns:1fr;
       }
 
-      .stats,
-      .trust{
+      .hero-stats,
+      .trust,
+      .why{
         grid-template-columns:1fr 1fr;
       }
 
       .navlinks{display:none}
-      h1{font-size:38px}
-      .hero-media{min-height:340px}
+      h1{font-size:42px}
+      .hero-media{min-height:380px}
+      .fleet-photo{min-height:320px}
       .span-7,.span-5,.span-4,.span-6{grid-column:span 12}
     }
 
     @media (max-width: 640px){
       .wrap{padding:0 16px}
       .nav-inner{padding:12px 16px}
-      .stats,.trust{grid-template-columns:1fr}
-      h1{font-size:31px}
+      .hero-stats,
+      .trust,
+      .why{
+        grid-template-columns:1fr;
+      }
+      h1{font-size:33px}
       .cta{flex-direction:column}
       .btn{width:100%}
-      .wa-float{right:12px; bottom:12px}
+      .wa-float{right:12px;bottom:12px}
     }
   </style>
 </head>
 <body>
+
   <header class="nav">
     <div class="nav-inner">
       <div class="brand">
-        <div class="logo">MC</div>
+        <div class="logo">MTZ</div>
         <div class="brand-text">
-          <div class="top">Martínez Cargo LLC</div>
-          <div class="sub">Transporte y logística profesional</div>
+          <div class="top">MTZ Cargo LLC</div>
+          <div class="sub" data-i18n="brand_sub">Transportation • Logistics • Flatbed • Gooseneck</div>
         </div>
       </div>
 
       <nav class="navlinks" aria-label="Secciones">
-        <a href="#servicios">Servicios</a>
-        <a href="#galeria">Galería</a>
-        <a href="#cobertura">Cobertura</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#why" data-i18n="nav_why">Why MTZ</a>
+        <a href="#services" data-i18n="nav_services">Servicios</a>
+        <a href="#fleet" data-i18n="nav_fleet">Flota</a>
+        <a href="#gallery" data-i18n="nav_gallery">Galería</a>
+        <a href="#contact" data-i18n="nav_contact">Contacto</a>
       </nav>
 
-      <a class="btn primary small" href="tel:+12817333949">Llamar ahora</a>
+      <div class="nav-actions">
+        <button class="btn secondary small" id="langToggle">ES / EN</button>
+        <a class="btn secondary small" href="mailto:mtztraffic@gmail.com" data-i18n="nav_email">Correo</a>
+        <a class="btn primary small" href="tel:+12817333949" data-i18n="nav_call">Llamar ahora</a>
+      </div>
     </div>
   </header>
 
   <main class="wrap">
+
     <section class="hero">
       <div>
-        <div class="eyebrow">📍 <b>Houston, TX</b> • Flatbed • Gooseneck • Carga segura</div>
+        <div class="eyebrow" data-i18n="eyebrow">🇺🇸 <b>Houston, Texas</b> • Flatbed • Gooseneck • Reliable Freight Solutions</div>
 
-        <h1>Movemos tu carga con imagen profesional, operación real y entregas confiables.</h1>
+        <h1 data-i18n="hero_title">Professional freight transportation with strong image, real operation and direct service.</h1>
 
-        <p class="lead">
-          En <b>Martínez Cargo LLC</b> trabajamos con atención directa, comunicación clara y enfoque en seguridad.
-          Transportamos materiales, maquinaria y carga especializada con servicio serio, puntual y bien coordinado.
+        <p class="lead" data-i18n="hero_lead">
+          En <b>MTZ Cargo LLC</b> movemos carga con presentación profesional, atención directa y enfoque en seguridad.
+          Trabajamos con materiales, equipo y movimientos especializados, manteniendo comunicación clara y servicio confiable desde Houston, Texas.
         </p>
 
         <div class="cta">
-          <a class="btn primary" href="#contacto">Solicitar cotización</a>
-          <a class="btn secondary" href="mailto:mtztraffic@gmail.com">Enviar correo</a>
+          <a class="btn primary" href="#contact" data-i18n="hero_quote">Solicitar cotización</a>
           <a class="btn secondary" href="https://wa.me/12817333949" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn secondary" href="mailto:mtztraffic@gmail.com" data-i18n="hero_email">Enviar correo</a>
         </div>
 
-        <div class="stats">
+        <div class="hero-stats">
           <div class="card">
             <div class="pad stat">
-              <div class="label">Operación real</div>
-              <div class="value">Trabajo en campo</div>
-              <div class="small">Experiencia en carga, amarre y coordinación de movimientos.</div>
+              <div class="k" data-i18n="stat1_k">Operación</div>
+              <div class="v" data-i18n="stat1_v">Trabajo real en campo</div>
+              <div class="s" data-i18n="stat1_s">Experiencia en coordinación, carga, maniobra y atención profesional al cliente.</div>
             </div>
           </div>
 
           <div class="card">
             <div class="pad stat">
-              <div class="label">Equipo</div>
-              <div class="value">Flatbed / Gooseneck</div>
-              <div class="small">Listos para materiales, estructuras, pallets y equipo industrial.</div>
+              <div class="k" data-i18n="stat2_k">Equipo</div>
+              <div class="v" data-i18n="stat2_v">Flatbed & Gooseneck</div>
+              <div class="s" data-i18n="stat2_s">Listos para mover materiales, estructuras, maquinaria y carga especializada.</div>
             </div>
           </div>
 
           <div class="card">
             <div class="pad stat">
-              <div class="label">Atención</div>
-              <div class="value">Seguimiento claro</div>
-              <div class="small">Comunicación directa por llamada, correo y WhatsApp.</div>
+              <div class="k" data-i18n="stat3_k">Atención</div>
+              <div class="v" data-i18n="stat3_v">Seguimiento claro</div>
+              <div class="s" data-i18n="stat3_s">Comunicación directa por teléfono, correo y WhatsApp para mayor confianza.</div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="hero-media" role="img" aria-label="Imagen principal de Martínez Cargo">
+      <div class="hero-media" role="img" aria-label="Camión MTZ Cargo con imagen principal">
+        <div class="hero-badge" data-i18n="hero_badge">MTZ CARGO LLC • AMERICAN FREIGHT IMAGE</div>
         <div class="hero-overlay">
-          <div class="topline">Martínez Cargo LLC • Flatbed & Gooseneck</div>
-          <div class="desc">
-            Ya conecté esta versión a tus imágenes reales del repositorio, sin carpeta assets.
+          <div class="topline" data-i18n="hero_overlay_title">Professional Transportation • Houston, TX</div>
+          <div class="desc" data-i18n="hero_overlay_desc">
+            Esta portada está pensada para que la empresa se vea más fuerte, más seria y más premium desde el primer segundo.
           </div>
         </div>
       </div>
@@ -693,46 +828,74 @@
 
     <section>
       <div class="trust">
-        <div class="mini">Servicio serio<span>Imagen limpia y profesional</span></div>
-        <div class="mini">Puntualidad<span>Planeación y seguimiento</span></div>
-        <div class="mini">Carga segura<span>Amarre y cuidado del material</span></div>
-        <div class="mini">Respuesta rápida<span>Contacto directo con el cliente</span></div>
+        <div class="mini" data-i18n="trust1">Reliable Service<span>Imagen limpia, seria y profesional para generar confianza.</span></div>
+        <div class="mini" data-i18n="trust2">On-Time Focus<span>Planeación y seguimiento para una operación mejor coordinada.</span></div>
+        <div class="mini" data-i18n="trust3">Secure Freight<span>Cuidado del material y atención en la presentación de la carga.</span></div>
+        <div class="mini" data-i18n="trust4">Direct Communication<span>Respuesta rápida por llamada, correo y WhatsApp.</span></div>
       </div>
     </section>
 
-    <section id="servicios">
+    <section id="why">
       <div class="section-head">
-        <h2>Servicios</h2>
-        <p>
-          Transporte con enfoque operativo real. Si tu carga requiere coordinación especial,
-          revisamos ruta, tipo de material y tiempos para darte la mejor opción.
+        <h2 data-i18n="why_title">Why Choose MTZ Cargo</h2>
+        <p data-i18n="why_p">
+          No se trata solo de mover carga. Se trata de transmitir confianza, mantener buena comunicación y proyectar una imagen seria frente al cliente desde la primera impresión.
         </p>
       </div>
 
-      <div class="two">
+      <div class="why">
+        <div class="why-card">
+          <div class="why-icon">🚛</div>
+          <h3 data-i18n="why1_h">Real Transportation Operation</h3>
+          <p data-i18n="why1_p">Servicio basado en trabajo real de campo, con enfoque práctico en maniobra, coordinación y cumplimiento.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">🛡️</div>
+          <h3 data-i18n="why2_h">Secure & Professional Handling</h3>
+          <p data-i18n="why2_p">Cada carga debe verse bien, viajar segura y llegar con la presentación adecuada para cuidar la reputación del servicio.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">📞</div>
+          <h3 data-i18n="why3_h">Direct Client Communication</h3>
+          <p data-i18n="why3_p">Atención clara y rápida para que el cliente tenga seguimiento, confianza y una experiencia más profesional.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="section-head">
+        <h2 data-i18n="services_title">Servicios</h2>
+        <p data-i18n="services_p">
+          Transporte con enfoque profesional para clientes que buscan puntualidad, imagen confiable y comunicación seria durante todo el movimiento.
+        </p>
+      </div>
+
+      <div class="split">
         <div class="card">
           <div class="pad">
-            <div class="badge">✅ Lo que hacemos</div>
+            <div class="badge" data-i18n="services_badge1">✅ Lo que hacemos</div>
             <ul class="clean">
               <li>
                 <span class="dot"></span>
                 <div>
-                  <b>Flatbed y Gooseneck</b>
-                  <div class="muted">Movimiento de materiales, estructuras, pallets, equipo y maquinaria.</div>
+                  <b data-i18n="s1_b">Flatbed y Gooseneck</b>
+                  <div class="muted" data-i18n="s1_p">Servicio para materiales, estructuras, pallets, equipo industrial y movimientos especializados.</div>
                 </div>
               </li>
               <li>
                 <span class="dot"></span>
                 <div>
-                  <b>Amarre profesional</b>
-                  <div class="muted">Carga bien asegurada con atención al cuidado del material y la presentación.</div>
+                  <b data-i18n="s2_b">Amarre y presentación</b>
+                  <div class="muted" data-i18n="s2_p">La carga no solo debe viajar segura; también debe proyectar orden y profesionalismo.</div>
                 </div>
               </li>
               <li>
                 <span class="dot"></span>
                 <div>
-                  <b>Entregas coordinadas</b>
-                  <div class="muted">Seguimiento para citas, horarios, instrucciones de sitio y comunicación clara.</div>
+                  <b data-i18n="s3_b">Entregas coordinadas</b>
+                  <div class="muted" data-i18n="s3_p">Seguimiento de citas, horarios, destinos y requerimientos específicos del cliente.</div>
                 </div>
               </li>
             </ul>
@@ -741,27 +904,27 @@
 
         <div class="card">
           <div class="pad">
-            <div class="badge">📌 Ideal para</div>
+            <div class="badge" data-i18n="services_badge2">📌 Ideal para</div>
             <ul class="clean">
               <li>
                 <span class="dot"></span>
                 <div>
-                  <b>Industria y construcción</b>
-                  <div class="muted">Acero, estructuras, panel, materiales y componentes pesados.</div>
+                  <b data-i18n="i1_b">Industria y construcción</b>
+                  <div class="muted" data-i18n="i1_p">Acero, panel, estructuras, materiales pesados y componentes de trabajo.</div>
                 </div>
               </li>
               <li>
                 <span class="dot"></span>
                 <div>
-                  <b>Equipo y maquinaria</b>
-                  <div class="muted">Movimientos donde la seguridad y la puntualidad son clave.</div>
+                  <b data-i18n="i2_b">Equipo y maquinaria</b>
+                  <div class="muted" data-i18n="i2_p">Movimientos donde la seguridad, el tiempo y la imagen del servicio son importantes.</div>
                 </div>
               </li>
               <li>
                 <span class="dot"></span>
                 <div>
-                  <b>Clientes que buscan confianza</b>
-                  <div class="muted">Servicio formal, imagen profesional y comunicación directa.</div>
+                  <b data-i18n="i3_b">Clientes que buscan seriedad</b>
+                  <div class="muted" data-i18n="i3_p">Empresas o personas que valoran puntualidad, trato claro y servicio profesional.</div>
                 </div>
               </li>
             </ul>
@@ -770,185 +933,218 @@
       </div>
     </section>
 
-    <section id="galeria">
+    <section id="fleet">
       <div class="section-head">
-        <h2>Galería de trabajos</h2>
-        <p>
-          Ya te la dejé conectada con tus fotos reales. Da click en cualquier imagen para verla más grande.
+        <h2 data-i18n="fleet_title">Our Fleet & Equipment</h2>
+        <p data-i18n="fleet_p">
+          Una empresa fuerte se ve mejor cuando muestra su equipo con claridad. Esta sección refuerza imagen, capacidad y confianza.
+        </p>
+      </div>
+
+      <div class="fleet-grid">
+        <div class="fleet-photo"></div>
+
+        <div class="fleet-panel">
+          <div class="card">
+            <div class="pad">
+              <div class="badge" data-i18n="fleet_badge">🚚 Equipo disponible</div>
+              <ul class="clean">
+                <li>
+                  <span class="dot"></span>
+                  <div>
+                    <b data-i18n="f1_b">Flatbed Trailers</b>
+                    <div class="muted" data-i18n="f1_p">Ideales para acero, pallets, estructuras y diferentes materiales de trabajo.</div>
+                  </div>
+                </li>
+                <li>
+                  <span class="dot"></span>
+                  <div>
+                    <b data-i18n="f2_b">Gooseneck Units</b>
+                    <div class="muted" data-i18n="f2_p">Excelente opción para equipo, maquinaria y cargas que requieren maniobra especializada.</div>
+                  </div>
+                </li>
+                <li>
+                  <span class="dot"></span>
+                  <div>
+                    <b data-i18n="f3_b">Securement Focus</b>
+                    <div class="muted" data-i18n="f3_p">Atención a la forma en que se asegura la carga para viajar con mayor confianza.</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="pad">
+              <div class="badge" data-i18n="fleet_badge2">⭐ Imagen de empresa</div>
+              <p class="muted" style="margin:14px 0 0; font-size:15px; line-height:1.7;" data-i18n="fleet_note">
+                Cuando la página muestra equipo, operación real y una identidad visual fuerte, la empresa transmite más nivel y más confianza desde el principio.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="section-head">
+        <h2 data-i18n="gallery_title">Recent Jobs Gallery</h2>
+        <p data-i18n="gallery_p">
+          Tus fotos ya están integradas para que la página se sienta real, profesional y conectada con el trabajo de MTZ Cargo.
         </p>
       </div>
 
       <div class="gallery">
-        <div class="g span-7" data-src="20260218_071704.jpg">
-          <img src="20260218_071704.jpg" alt="Trabajo destacado" loading="lazy">
-          <div class="cap"><b>Imagen principal de operación</b><span>Destacado</span></div>
+        <div class="g span-7" data-src="1000088208.jpg">
+          <img src="1000088208.jpg" alt="Trabajo 1" loading="lazy">
+          <div class="cap"><b data-i18n="g1_b">Imagen principal con bandera</b><span data-i18n="g1_s">Hero image</span></div>
         </div>
 
-        <div class="g span-5" data-src="1000088208.jpg">
-          <img src="1000088208.jpg" alt="Trabajo 2" loading="lazy">
-          <div class="cap"><b>Transporte y maniobra</b><span>Operación real</span></div>
+        <div class="g span-5" data-src="20260218_071704.jpg">
+          <img src="20260218_071704.jpg" alt="Trabajo 2" loading="lazy">
+          <div class="cap"><b data-i18n="g2_b">Operación en sitio</b><span data-i18n="g2_s">Real work</span></div>
         </div>
 
         <div class="g span-4" data-src="1000157831.jpg">
           <img src="1000157831.jpg" alt="Trabajo 3" loading="lazy">
-          <div class="cap"><b>Movimiento de carga</b><span>Logística</span></div>
+          <div class="cap"><b data-i18n="g3_b">Movimiento de carga</b><span data-i18n="g3_s">Logistics</span></div>
         </div>
 
         <div class="g span-4" data-src="1000157838%202.jpg">
           <img src="1000157838%202.jpg" alt="Trabajo 4" loading="lazy">
-          <div class="cap"><b>Carga especializada</b><span>Seguridad</span></div>
+          <div class="cap"><b data-i18n="g4_b">Carga especializada</b><span data-i18n="g4_s">Securement</span></div>
         </div>
 
         <div class="g span-4" data-src="7e39f5cc-c442-44bf-894d-0c9c674d460e-1_all_10653.jpg">
           <img src="7e39f5cc-c442-44bf-894d-0c9c674d460e-1_all_10653.jpg" alt="Trabajo 5" loading="lazy">
-          <div class="cap"><b>Trabajo en campo</b><span>Flatbed</span></div>
+          <div class="cap"><b data-i18n="g5_b">Flatbed operation</b><span data-i18n="g5_s">Field</span></div>
         </div>
 
         <div class="g span-6" data-src="7e39f5cc-c442-44bf-894d-0c9c674d460e-1_all_11234.jpg">
           <img src="7e39f5cc-c442-44bf-894d-0c9c674d460e-1_all_11234.jpg" alt="Trabajo 6" loading="lazy">
-          <div class="cap"><b>Entrega y coordinación</b><span>Seguimiento</span></div>
+          <div class="cap"><b data-i18n="g6_b">Equipment & delivery</b><span data-i18n="g6_s">Service</span></div>
         </div>
 
         <div class="g span-6" data-src="7e39f5cc-c442-44bf-894d-0c9c674d460e-1_all_27394.jpg">
           <img src="7e39f5cc-c442-44bf-894d-0c9c674d460e-1_all_27394.jpg" alt="Trabajo 7" loading="lazy">
-          <div class="cap"><b>Imagen de operación</b><span>Martínez Cargo</span></div>
+          <div class="cap"><b data-i18n="g7_b">MTZ Cargo operation</b><span data-i18n="g7_s">Gallery</span></div>
         </div>
       </div>
     </section>
 
-    <section id="cobertura">
-      <div class="section-head">
-        <h2>Cobertura</h2>
-        <p>
-          Base en Houston, Texas. Disponibilidad para rutas locales, regionales y foráneas
-          según el tipo de carga, agenda y requerimientos del cliente.
-        </p>
-      </div>
-
-      <div class="coverage-grid">
-        <div class="card">
-          <div class="pad">
-            <div class="badge">🗺️ Área de operación</div>
-            <p class="lead" style="margin-top:14px; font-size:16px">
-              Salidas desde Houston con enfoque en servicio puntual, comunicación clara y atención profesional.
-              Si después quieres, te personalizo esta parte con tus rutas frecuentes para que se vea todavía más fuerte.
-            </p>
+    <section>
+      <div class="quote">
+        <div class="quote-banner">
+          <div class="overlay">
+            <div style="font-size:15px;font-weight:900;margin-bottom:8px;" data-i18n="quote_title">Request a Quote Today</div>
+            <div style="color:#d8e2ee;font-size:13px;line-height:1.6;font-weight:700;" data-i18n="quote_text">
+              Una cotización clara y una respuesta rápida hacen que la experiencia del cliente se vea más profesional.
+            </div>
           </div>
         </div>
 
         <div class="card">
           <div class="pad">
-            <div class="badge">⭐ Compromiso</div>
+            <div class="badge" data-i18n="quote_badge">📝 Información para cotizar</div>
             <ul class="clean">
               <li>
                 <span class="dot"></span>
                 <div>
-                  <b>Planeación</b>
-                  <div class="muted">Revisión clara antes de mover la carga.</div>
+                  <b data-i18n="q1_b">Origen y destino</b>
+                  <div class="muted" data-i18n="q1_p">Ciudad, estado y fecha de salida estimada.</div>
                 </div>
               </li>
               <li>
                 <span class="dot"></span>
                 <div>
-                  <b>Presentación profesional</b>
-                  <div class="muted">Imagen seria para generar confianza al cliente.</div>
+                  <b data-i18n="q2_b">Tipo de carga</b>
+                  <div class="muted" data-i18n="q2_p">Peso, medidas y detalles importantes del material o equipo.</div>
+                </div>
+              </li>
+              <li>
+                <span class="dot"></span>
+                <div>
+                  <b data-i18n="q3_b">Requerimientos especiales</b>
+                  <div class="muted" data-i18n="q3_p">Cita, horario, contacto en sitio o instrucciones adicionales.</div>
                 </div>
               </li>
             </ul>
+
+            <div class="cta" style="margin-top:18px;">
+              <a class="btn primary" href="mailto:mtztraffic@gmail.com?subject=Quote%20Request%20-%20MTZ%20Cargo%20LLC&body=Hello,%20I%20would%20like%20a%20quote.%0A%0AOrigin:%0ADestination:%0ADate:%0ACargo%20type:%0AWeight%20and%20dimensions:%0A%0AThank%20you." data-i18n="quote_btn">Pedir cotización</a>
+              <a class="btn secondary" href="https://wa.me/12817333949" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contacto">
+    <section id="contact">
       <div class="section-head">
-        <h2>Contacto</h2>
-        <p>
-          Llámanos o escríbenos para revisar tu carga y prepararte una cotización rápida.
+        <h2 data-i18n="contact_title">Contacto</h2>
+        <p data-i18n="contact_p">
+          Llámanos o escríbenos para revisar tu carga y darte una respuesta rápida con imagen profesional.
         </p>
       </div>
 
-      <div class="contact">
+      <div class="contact-grid">
         <div class="card">
           <div class="pad">
-            <b style="font-size:18px">Martínez Cargo LLC</b>
+            <b style="font-size:19px;">MTZ Cargo LLC</b>
 
-            <div class="muted" style="margin-top:14px; font-weight:900">Teléfono</div>
-            <div style="margin-top:6px">
+            <div class="muted" style="margin-top:14px;font-weight:900;" data-i18n="contact_phone">Teléfono</div>
+            <div style="margin-top:6px;">
               <a class="link" href="tel:+12817333949">281-733-3949</a>
             </div>
 
-            <div class="muted" style="margin-top:16px; font-weight:900">Correos</div>
-            <div style="margin-top:6px; display:grid; gap:6px">
+            <div class="muted" style="margin-top:16px;font-weight:900;" data-i18n="contact_emails">Correos</div>
+            <div style="margin-top:6px;display:grid;gap:6px;">
               <a class="link" href="mailto:mtztraffic@gmail.com">mtztraffic@gmail.com</a>
               <a class="link" href="mailto:mtz.transportation@hotmail.com">mtz.transportation@hotmail.com</a>
             </div>
 
-            <div class="muted" style="margin-top:16px; font-weight:900">Horario</div>
-            <div style="margin-top:6px; font-weight:800">Lunes a Sábado • 8:00 AM – 6:00 PM</div>
+            <div class="muted" style="margin-top:16px;font-weight:900;" data-i18n="contact_hours">Horario</div>
+            <div style="margin-top:6px;font-weight:800;" data-i18n="contact_hours_val">Lunes a Sábado • 8:00 AM – 6:00 PM</div>
 
-            <div class="cta" style="margin-top:18px">
-              <a class="btn primary" href="https://wa.me/12817333949" target="_blank" rel="noopener">WhatsApp</a>
-              <a class="btn secondary" href="tel:+12817333949">Llamar</a>
+            <div class="cta" style="margin-top:18px;">
+              <a class="btn primary" href="tel:+12817333949" data-i18n="contact_call">Llamar ahora</a>
+              <a class="btn secondary" href="https://wa.me/12817333949" target="_blank" rel="noopener">WhatsApp</a>
             </div>
           </div>
         </div>
 
         <div class="card">
           <div class="pad">
-            <div class="badge">📝 Para cotizar</div>
-            <ul class="clean">
-              <li>
-                <span class="dot"></span>
-                <div>
-                  <b>Origen y destino</b>
-                  <div class="muted">Ciudad, estado y fecha de salida.</div>
-                </div>
-              </li>
-              <li>
-                <span class="dot"></span>
-                <div>
-                  <b>Tipo de carga</b>
-                  <div class="muted">Peso, medidas y detalles importantes del material.</div>
-                </div>
-              </li>
-              <li>
-                <span class="dot"></span>
-                <div>
-                  <b>Condiciones especiales</b>
-                  <div class="muted">Horario, cita, contacto en sitio o requerimientos adicionales.</div>
-                </div>
-              </li>
-            </ul>
-
-            <div class="cta" style="margin-top:18px">
-              <a class="btn primary" href="mailto:mtztraffic@gmail.com?subject=Solicitud%20de%20cotizaci%C3%B3n%20-%20Mart%C3%ADnez%20Cargo%20LLC&body=Hola,%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n.%0A%0AOrigen:%0ADestino:%0AFecha:%0ATipo%20de%20carga:%0APeso%20y%20dimensiones:%0A%0AGracias.">Pedir cotización por correo</a>
-            </div>
+            <div class="badge" data-i18n="contact_badge">⭐ MTZ Cargo Image</div>
+            <p class="muted" style="margin-top:14px;font-size:15px;line-height:1.75;" data-i18n="contact_note">
+              Esta versión está hecha para que la empresa se vea más fuerte, más seria y con estilo de compañía americana de transporte.
+              Después, si quieres, el siguiente paso sería agregar un logo real y una sección bilingüe más comercial.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
     <div class="footer">
-      © <span id="year"></span> Martínez Cargo LLC. Todos los derechos reservados.
+      © <span id="year"></span> MTZ Cargo LLC • Houston, Texas • <span data-i18n="footer_text">Transportation & Logistics</span>
     </div>
   </main>
 
-  <a class="wa-float" href="https://wa.me/12817333949" target="_blank" rel="noopener" aria-label="WhatsApp Martínez Cargo">
+  <a class="wa-float" href="https://wa.me/12817333949" target="_blank" rel="noopener" aria-label="WhatsApp MTZ Cargo">
     <span class="wa-dot"></span>
     <div>
       <b>WhatsApp</b>
-      <span>Respuesta rápida</span>
+      <span data-i18n="wa_text">Respuesta rápida</span>
     </div>
   </a>
 
   <div class="lightbox" id="lightbox">
     <div class="lb-card">
       <div class="lb-top">
-        <div class="lb-pill">Martínez Cargo LLC • Galería</div>
-        <button class="lb-close" id="lbClose">Cerrar ✕</button>
+        <div class="lb-pill">MTZ Cargo LLC • Gallery</div>
+        <button class="lb-close" id="lbClose" data-i18n="close_btn">Cerrar ✕</button>
       </div>
-      <img id="lbImg" src="" alt="Imagen ampliada">
+      <img id="lbImg" src="" alt="Imagen ampliada" />
     </div>
   </div>
 
@@ -976,10 +1172,241 @@
     lb.addEventListener("click", (e) => {
       if(e.target === lb) closeLightbox();
     });
-
     document.addEventListener("keydown", (e) => {
       if(e.key === "Escape") closeLightbox();
     });
+
+    const dict = {
+      es: {
+        brand_sub: "Transportation • Logistics • Flatbed • Gooseneck",
+        nav_why: "Por qué MTZ",
+        nav_services: "Servicios",
+        nav_fleet: "Flota",
+        nav_gallery: "Galería",
+        nav_contact: "Contacto",
+        nav_email: "Correo",
+        nav_call: "Llamar ahora",
+        eyebrow: '🇺🇸 <b>Houston, Texas</b> • Flatbed • Gooseneck • Soluciones de carga confiables',
+        hero_title: "Transporte profesional de carga con imagen fuerte, operación real y atención directa.",
+        hero_lead: "En <b>MTZ Cargo LLC</b> movemos carga con presentación profesional, atención directa y enfoque en seguridad. Trabajamos con materiales, equipo y movimientos especializados, manteniendo comunicación clara y servicio confiable desde Houston, Texas.",
+        hero_quote: "Solicitar cotización",
+        hero_email: "Enviar correo",
+        stat1_k: "Operación",
+        stat1_v: "Trabajo real en campo",
+        stat1_s: "Experiencia en coordinación, carga, maniobra y atención profesional al cliente.",
+        stat2_k: "Equipo",
+        stat2_v: "Flatbed & Gooseneck",
+        stat2_s: "Listos para mover materiales, estructuras, maquinaria y carga especializada.",
+        stat3_k: "Atención",
+        stat3_v: "Seguimiento claro",
+        stat3_s: "Comunicación directa por teléfono, correo y WhatsApp para mayor confianza.",
+        hero_badge: "MTZ CARGO LLC • IMAGEN AMERICANA DE FREIGHT",
+        hero_overlay_title: "Transporte profesional • Houston, TX",
+        hero_overlay_desc: "Esta portada está pensada para que la empresa se vea más fuerte, más seria y más premium desde el primer segundo.",
+        trust1: "Servicio confiable<span>Imagen limpia, seria y profesional para generar confianza.</span>",
+        trust2: "Enfoque en puntualidad<span>Planeación y seguimiento para una operación mejor coordinada.</span>",
+        trust3: "Carga segura<span>Cuidado del material y atención en la presentación de la carga.</span>",
+        trust4: "Comunicación directa<span>Respuesta rápida por llamada, correo y WhatsApp.</span>",
+        why_title: "Por qué elegir MTZ Cargo",
+        why_p: "No se trata solo de mover carga. Se trata de transmitir confianza, mantener buena comunicación y proyectar una imagen seria frente al cliente desde la primera impresión.",
+        why1_h: "Operación real de transporte",
+        why1_p: "Servicio basado en trabajo real de campo, con enfoque práctico en maniobra, coordinación y cumplimiento.",
+        why2_h: "Manejo seguro y profesional",
+        why2_p: "Cada carga debe verse bien, viajar segura y llegar con la presentación adecuada para cuidar la reputación del servicio.",
+        why3_h: "Comunicación directa con el cliente",
+        why3_p: "Atención clara y rápida para que el cliente tenga seguimiento, confianza y una experiencia más profesional.",
+        services_title: "Servicios",
+        services_p: "Transporte con enfoque profesional para clientes que buscan puntualidad, imagen confiable y comunicación seria durante todo el movimiento.",
+        services_badge1: "✅ Lo que hacemos",
+        services_badge2: "📌 Ideal para",
+        s1_b: "Flatbed y Gooseneck",
+        s1_p: "Servicio para materiales, estructuras, pallets, equipo industrial y movimientos especializados.",
+        s2_b: "Amarre y presentación",
+        s2_p: "La carga no solo debe viajar segura; también debe proyectar orden y profesionalismo.",
+        s3_b: "Entregas coordinadas",
+        s3_p: "Seguimiento de citas, horarios, destinos y requerimientos específicos del cliente.",
+        i1_b: "Industria y construcción",
+        i1_p: "Acero, panel, estructuras, materiales pesados y componentes de trabajo.",
+        i2_b: "Equipo y maquinaria",
+        i2_p: "Movimientos donde la seguridad, el tiempo y la imagen del servicio son importantes.",
+        i3_b: "Clientes que buscan seriedad",
+        i3_p: "Empresas o personas que valoran puntualidad, trato claro y servicio profesional.",
+        fleet_title: "Nuestra flota y equipo",
+        fleet_p: "Una empresa fuerte se ve mejor cuando muestra su equipo con claridad. Esta sección refuerza imagen, capacidad y confianza.",
+        fleet_badge: "🚚 Equipo disponible",
+        f1_b: "Remolques Flatbed",
+        f1_p: "Ideales para acero, pallets, estructuras y diferentes materiales de trabajo.",
+        f2_b: "Unidades Gooseneck",
+        f2_p: "Excelente opción para equipo, maquinaria y cargas que requieren maniobra especializada.",
+        f3_b: "Enfoque en aseguramiento",
+        f3_p: "Atención a la forma en que se asegura la carga para viajar con mayor confianza.",
+        fleet_badge2: "⭐ Imagen de empresa",
+        fleet_note: "Cuando la página muestra equipo, operación real y una identidad visual fuerte, la empresa transmite más nivel y más confianza desde el principio.",
+        gallery_title: "Galería de trabajos recientes",
+        gallery_p: "Tus fotos ya están integradas para que la página se sienta real, profesional y conectada con el trabajo de MTZ Cargo.",
+        g1_b: "Imagen principal con bandera",
+        g1_s: "Portada",
+        g2_b: "Operación en sitio",
+        g2_s: "Trabajo real",
+        g3_b: "Movimiento de carga",
+        g3_s: "Logística",
+        g4_b: "Carga especializada",
+        g4_s: "Aseguramiento",
+        g5_b: "Operación flatbed",
+        g5_s: "Campo",
+        g6_b: "Equipo y entrega",
+        g6_s: "Servicio",
+        g7_b: "Operación MTZ Cargo",
+        g7_s: "Galería",
+        quote_title: "Solicita una cotización hoy",
+        quote_text: "Una cotización clara y una respuesta rápida hacen que la experiencia del cliente se vea más profesional.",
+        quote_badge: "📝 Información para cotizar",
+        q1_b: "Origen y destino",
+        q1_p: "Ciudad, estado y fecha de salida estimada.",
+        q2_b: "Tipo de carga",
+        q2_p: "Peso, medidas y detalles importantes del material o equipo.",
+        q3_b: "Requerimientos especiales",
+        q3_p: "Cita, horario, contacto en sitio o instrucciones adicionales.",
+        quote_btn: "Pedir cotización",
+        contact_title: "Contacto",
+        contact_p: "Llámanos o escríbenos para revisar tu carga y darte una respuesta rápida con imagen profesional.",
+        contact_phone: "Teléfono",
+        contact_emails: "Correos",
+        contact_hours: "Horario",
+        contact_hours_val: "Lunes a Sábado • 8:00 AM – 6:00 PM",
+        contact_call: "Llamar ahora",
+        contact_badge: "⭐ Imagen MTZ Cargo",
+        contact_note: "Esta versión está hecha para que la empresa se vea más fuerte, más seria y con estilo de compañía americana de transporte. Después, si quieres, el siguiente paso sería agregar un logo real y una sección bilingüe más comercial.",
+        footer_text: "Transportation & Logistics",
+        wa_text: "Respuesta rápida",
+        close_btn: "Cerrar ✕"
+      },
+      en: {
+        brand_sub: "Transportation • Logistics • Flatbed • Gooseneck",
+        nav_why: "Why MTZ",
+        nav_services: "Services",
+        nav_fleet: "Fleet",
+        nav_gallery: "Gallery",
+        nav_contact: "Contact",
+        nav_email: "Email",
+        nav_call: "Call now",
+        eyebrow: '🇺🇸 <b>Houston, Texas</b> • Flatbed • Gooseneck • Reliable Freight Solutions',
+        hero_title: "Professional freight transportation with strong image, real operation and direct service.",
+        hero_lead: "At <b>MTZ Cargo LLC</b>, we move freight with a professional image, direct attention and a strong focus on safety. We handle materials, equipment and specialized loads while maintaining clear communication and dependable service from Houston, Texas.",
+        hero_quote: "Request a quote",
+        hero_email: "Send email",
+        stat1_k: "Operation",
+        stat1_v: "Real field work",
+        stat1_s: "Experience in coordination, loading, maneuvering and professional client service.",
+        stat2_k: "Equipment",
+        stat2_v: "Flatbed & Gooseneck",
+        stat2_s: "Ready to move materials, structures, machinery and specialized freight.",
+        stat3_k: "Service",
+        stat3_v: "Clear follow-up",
+        stat3_s: "Direct communication by phone, email and WhatsApp for greater trust.",
+        hero_badge: "MTZ CARGO LLC • AMERICAN FREIGHT IMAGE",
+        hero_overlay_title: "Professional Transportation • Houston, TX",
+        hero_overlay_desc: "This hero section is designed to make the company look stronger, more serious and more premium from the very first second.",
+        trust1: "Reliable Service<span>Clean, serious and professional image that builds trust.</span>",
+        trust2: "On-Time Focus<span>Planning and follow-up for a better coordinated operation.</span>",
+        trust3: "Secure Freight<span>Care for the material and attention to how the load is presented.</span>",
+        trust4: "Direct Communication<span>Fast response by phone, email and WhatsApp.</span>",
+        why_title: "Why Choose MTZ Cargo",
+        why_p: "It is not only about moving freight. It is about building trust, maintaining strong communication and projecting a serious image from the very first impression.",
+        why1_h: "Real Transportation Operation",
+        why1_p: "Service based on real field work, with a practical focus on maneuvering, coordination and execution.",
+        why2_h: "Secure & Professional Handling",
+        why2_p: "Every load should look right, travel safely and arrive with the proper presentation to protect the reputation of the service.",
+        why3_h: "Direct Client Communication",
+        why3_p: "Clear and fast attention so the client gets follow-up, confidence and a more professional experience.",
+        services_title: "Services",
+        services_p: "Transportation with a professional approach for clients who value punctuality, dependable image and serious communication throughout the move.",
+        services_badge1: "✅ What we do",
+        services_badge2: "📌 Ideal for",
+        s1_b: "Flatbed & Gooseneck",
+        s1_p: "Service for materials, structures, pallets, industrial equipment and specialized moves.",
+        s2_b: "Securement & presentation",
+        s2_p: "Freight should not only travel safely; it should also reflect order and professionalism.",
+        s3_b: "Coordinated deliveries",
+        s3_p: "Follow-up for appointments, schedules, destinations and specific client requirements.",
+        i1_b: "Industry & construction",
+        i1_p: "Steel, panels, structures, heavy materials and work components.",
+        i2_b: "Equipment & machinery",
+        i2_p: "Moves where safety, timing and service image are important.",
+        i3_b: "Clients seeking professionalism",
+        i3_p: "Companies or individuals who value punctuality, clear treatment and professional service.",
+        fleet_title: "Our Fleet & Equipment",
+        fleet_p: "A strong company looks better when it clearly shows its equipment. This section reinforces image, capability and trust.",
+        fleet_badge: "🚚 Available equipment",
+        f1_b: "Flatbed Trailers",
+        f1_p: "Ideal for steel, pallets, structures and different work materials.",
+        f2_b: "Gooseneck Units",
+        f2_p: "A strong option for equipment, machinery and loads that require specialized maneuvering.",
+        f3_b: "Securement Focus",
+        f3_p: "Attention to how freight is secured for more confident transportation.",
+        fleet_badge2: "⭐ Company image",
+        fleet_note: "When the website shows equipment, real operation and a strong visual identity, the company communicates a higher level and more trust from the start.",
+        gallery_title: "Recent Jobs Gallery",
+        gallery_p: "Your photos are already integrated so the website feels real, professional and connected to MTZ Cargo’s work.",
+        g1_b: "Main image with flag",
+        g1_s: "Hero image",
+        g2_b: "On-site operation",
+        g2_s: "Real work",
+        g3_b: "Freight movement",
+        g3_s: "Logistics",
+        g4_b: "Specialized load",
+        g4_s: "Securement",
+        g5_b: "Flatbed operation",
+        g5_s: "Field",
+        g6_b: "Equipment & delivery",
+        g6_s: "Service",
+        g7_b: "MTZ Cargo operation",
+        g7_s: "Gallery",
+        quote_title: "Request a Quote Today",
+        quote_text: "A clear quote and a fast response make the client experience look more professional.",
+        quote_badge: "📝 Information for a quote",
+        q1_b: "Origin and destination",
+        q1_p: "City, state and estimated pickup date.",
+        q2_b: "Type of freight",
+        q2_p: "Weight, dimensions and important details about the material or equipment.",
+        q3_b: "Special requirements",
+        q3_p: "Appointment, schedule, site contact or additional instructions.",
+        quote_btn: "Request a quote",
+        contact_title: "Contact",
+        contact_p: "Call or message us to review your freight and get a fast response with a professional image.",
+        contact_phone: "Phone",
+        contact_emails: "Emails",
+        contact_hours: "Hours",
+        contact_hours_val: "Monday to Saturday • 8:00 AM – 6:00 PM",
+        contact_call: "Call now",
+        contact_badge: "⭐ MTZ Cargo Image",
+        contact_note: "This version is designed to make the company look stronger, more serious and styled like an American transportation company. Later, the next step could be adding a real logo and an even more commercial bilingual section.",
+        footer_text: "Transportation & Logistics",
+        wa_text: "Fast reply",
+        close_btn: "Close ✕"
+      }
+    };
+
+    let lang = localStorage.getItem("mtz_lang") || "es";
+
+    function applyLang(l){
+      lang = l;
+      document.documentElement.lang = l;
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if(dict[l][key] !== undefined){
+          el.innerHTML = dict[l][key];
+        }
+      });
+      localStorage.setItem("mtz_lang", l);
+    }
+
+    applyLang(lang);
+
+    document.getElementById("langToggle").addEventListener("click", () => {
+      applyLang(lang === "es" ? "en" : "es");
+    });
   </script>
+
 </body>
 </html>
