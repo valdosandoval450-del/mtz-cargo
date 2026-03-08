@@ -1,174 +1,279 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MTZ Cargo LLC</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MTZ Cargo LLC</title>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      line-height: 1.6;
+    }
 
-<style>
+    header {
+      background: linear-gradient(135deg, #c40000, #8b0000);
+      text-align: center;
+      padding: 60px 20px;
+    }
 
-body{
-margin:0;
-font-family:Arial;
-background:#111;
-color:white;
-}
+    header h1 {
+      margin: 0;
+      font-size: 48px;
+    }
 
-header{
-background:#c40000;
-padding:25px;
-text-align:center;
-}
+    header p {
+      font-size: 22px;
+      margin-top: 15px;
+    }
 
-header h1{
-margin:0;
-font-size:40px;
-}
+    nav {
+      background: #000;
+      text-align: center;
+      padding: 18px 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-nav{
-background:black;
-text-align:center;
-padding:15px;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 18px;
+      font-size: 18px;
+      font-weight: bold;
+    }
 
-nav a{
-color:white;
-margin:15px;
-text-decoration:none;
-font-size:18px;
-}
+    nav a:hover {
+      color: #ff4d4d;
+    }
 
-.hero{
-padding:80px 20px;
-text-align:center;
-background:#222;
-}
+    .hero {
+      padding: 80px 20px;
+      text-align: center;
+      background: url('https://images.unsplash.com/photo-1501706362039-c6e80948a1cf?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      position: relative;
+    }
 
-.hero h2{
-font-size:35px;
-}
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+    }
 
-section{
-padding:60px 20px;
-text-align:center;
-}
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: auto;
+    }
 
-.services{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-}
+    .hero h2 {
+      font-size: 52px;
+      margin-bottom: 20px;
+    }
 
-.service{
-background:#222;
-padding:25px;
-width:250px;
-border-radius:10px;
-}
+    .hero p {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
 
-.contact{
-background:#c40000;
-padding:40px;
-}
+    .btn {
+      display: inline-block;
+      background: #c40000;
+      color: white;
+      padding: 14px 28px;
+      margin: 10px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 18px;
+    }
 
-button{
-background:#25D366;
-border:none;
-padding:15px 25px;
-font-size:18px;
-border-radius:8px;
-color:white;
-cursor:pointer;
-}
+    .btn:hover {
+      background: #ff1a1a;
+    }
 
-footer{
-background:black;
-text-align:center;
-padding:20px;
-}
+    section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
 
-</style>
+    h2.section-title {
+      text-align: center;
+      font-size: 40px;
+      margin-bottom: 40px;
+      color: #fff;
+    }
 
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #1c1c1c;
+      padding: 30px 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 12px rgba(0,0,0,0.3);
+    }
+
+    .card h3 {
+      color: #ff4d4d;
+      margin-bottom: 15px;
+    }
+
+    .about {
+      text-align: center;
+      font-size: 20px;
+      color: #ddd;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .contact-box {
+      background: #1c1c1c;
+      padding: 35px;
+      border-radius: 12px;
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .contact-box p {
+      font-size: 20px;
+      margin: 12px 0;
+    }
+
+    .contact-box a {
+      color: #ff4d4d;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 25px;
+      color: #aaa;
+      margin-top: 40px;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 14px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 38px;
+      }
+
+      .hero h2 {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 20px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 8px 10px;
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
+  <header>
+    <h1>MTZ Cargo LLC</h1>
+    <p>Reliable Freight Transportation</p>
+  </header>
 
-<h1>MTZ Cargo LLC</h1>
-<p>Reliable Freight Transportation</p>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-</header>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h2>Professional Transportation Services</h2>
+      <p>18 Wheelers • Flatbed • Gooseneck • Freight Delivery</p>
+      <a class="btn" href="tel:2817333949">Call Now</a>
+      <a class="btn" href="https://wa.me/12817333949" target="_blank">WhatsApp</a>
+    </div>
+  </section>
 
-<nav>
+  <section id="services">
+    <h2 class="section-title">Our Services</h2>
+    <div class="services">
+      <div class="card">
+        <h3>18 Wheeler Transportation</h3>
+        <p>Dependable freight transport for heavy and commercial loads.</p>
+      </div>
+      <div class="card">
+        <h3>Flatbed Hauling</h3>
+        <p>Safe and efficient flatbed service for equipment and materials.</p>
+      </div>
+      <div class="card">
+        <h3>Gooseneck Trailer Service</h3>
+        <p>Flexible transport solutions for machinery, vehicles, and cargo.</p>
+      </div>
+      <div class="card">
+        <h3>Freight Delivery</h3>
+        <p>On-time delivery with professional handling and customer support.</p>
+      </div>
+    </div>
+  </section>
 
-<a href="#">Home</a>
-<a href="#">Services</a>
-<a href="#">Contact</a>
+  <section id="about">
+    <h2 class="section-title">About Us</h2>
+    <div class="about">
+      <p>
+        MTZ Cargo LLC is committed to providing reliable, professional, and efficient
+        transportation services. We work hard to move freight safely and on time,
+        offering dependable solutions for every customer.
+      </p>
+    </div>
+  </section>
 
-</nav>
+  <section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <div class="contact-box">
+      <p><strong>Phone:</strong> <a href="tel:2817333949">(281) 733-3949</a></p>
+      <p><strong>Email:</strong> <a href="mailto:mtz.transportation@hotmail.com">mtz.transportation@hotmail.com</a></p>
+      <p><strong>Email:</strong> <a href="mailto:mtztraffic@gmail.com">mtztraffic@gmail.com</a></p>
+      <p><strong>Location:</strong> Houston, Texas</p>
+    </div>
+  </section>
 
-<div class="hero">
+  <footer>
+    <p>© 2026 MTZ Cargo LLC. All rights reserved.</p>
+  </footer>
 
-<h2>Professional Transportation Services</h2>
-
-<p>18 Wheelers • Flatbed • Gooseneck • Freight Delivery</p>
-
-</div>
-
-<section>
-
-<h2>Our Services</h2>
-
-<div class="services">
-
-<div class="service">
-<h3>18 Wheeler Transport</h3>
-<p>Professional freight transportation across the United States.</p>
-</div>
-
-<div class="service">
-<h3>Gooseneck 40ft</h3>
-<p>Heavy equipment and freight transport with flatbed trailers.</p>
-</div>
-
-<div class="service">
-<h3>Reliable Logistics</h3>
-<p>Safe and on-time deliveries for your cargo.</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="contact">
-
-<h2>Contact Us</h2>
-
-<p>Owner: Héctor Martínez</p>
-
-<p>Phone: 281-733-3949</p>
-
-<p>Email: mtz.transportation@hotmail.com</p>
-
-<br>
-
-<a href="https://wa.me/12817333949">
-
-<button>Message on WhatsApp</button>
-
-</a>
-
-</section>
-
-<footer>
-
-<p>© 2026 MTZ Cargo LLC - All Rights Reserved</p>
-
-</footer>
+  <a class="whatsapp-float" href="https://wa.me/12817333949" target="_blank">WhatsApp</a>
 
 </body>
-
 </html>
