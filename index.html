@@ -3,21 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MTZ Cargo LLC | Flatbed • Gooseneck • Transportation & Logistics</title>
-  <meta name="description" content="MTZ Cargo LLC. Transporte profesional desde Houston, Texas. Flatbed, Gooseneck, logística, carga segura, entregas puntuales y atención directa." />
+  <title>MTZ Cargo LLC | Transportation & Logistics</title>
+  <meta name="description" content="MTZ Cargo LLC. Flatbed, Gooseneck, logística y transporte profesional desde Houston, Texas." />
 
   <style>
     :root{
-      --bg:#060b14;
-      --card:rgba(10,18,32,.78);
+      --bg:#07101b;
+      --bg2:#0b1626;
+      --panel:rgba(11,22,38,.78);
+      --panel-2:rgba(255,255,255,.04);
       --line:rgba(255,255,255,.08);
-      --text:#f3f7fb;
+      --text:#eef4fb;
       --muted:#9fb0c4;
       --brand:#39e06f;
-      --brand-dark:#16a34a;
-      --shadow:0 30px 80px rgba(0,0,0,.40);
+      --brand-dark:#179c49;
+      --white:#ffffff;
+      --shadow:0 28px 80px rgba(0,0,0,.42);
       --radius:24px;
-      --max:1220px;
+      --max:1240px;
     }
 
     *{box-sizing:border-box}
@@ -28,20 +31,20 @@
       color:var(--text);
       background:
         radial-gradient(900px 420px at 10% -10%, rgba(57,224,111,.14), transparent 58%),
-        radial-gradient(850px 380px at 100% 0%, rgba(59,130,246,.10), transparent 50%),
+        radial-gradient(900px 400px at 100% 0%, rgba(59,130,246,.10), transparent 52%),
         linear-gradient(180deg, #04070d 0%, var(--bg) 100%);
     }
 
-    a{text-decoration:none;color:inherit}
+    a{color:inherit;text-decoration:none}
     img{display:block;max-width:100%}
     .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
 
     .nav{
       position:sticky;
       top:0;
-      z-index:80;
+      z-index:90;
       backdrop-filter:blur(14px);
-      background:rgba(4,7,13,.72);
+      background:rgba(4,7,13,.76);
       border-bottom:1px solid var(--line);
     }
 
@@ -63,16 +66,16 @@
     }
 
     .logo{
-      width:48px;
-      height:48px;
+      width:50px;
+      height:50px;
       border-radius:16px;
-      background:linear-gradient(135deg, #66ff99, #39e06f 55%, #15803d);
-      color:#03210d;
-      font-weight:900;
-      font-size:18px;
       display:grid;
       place-items:center;
-      box-shadow:0 18px 35px rgba(57,224,111,.25);
+      background:linear-gradient(135deg,#76ffab,#39e06f 55%,#15803d);
+      color:#04200f;
+      font-weight:900;
+      letter-spacing:.5px;
+      box-shadow:0 18px 34px rgba(57,224,111,.24);
       flex:0 0 auto;
     }
 
@@ -126,9 +129,9 @@
       border-radius:14px;
       font-weight:900;
       border:1px solid transparent;
-      cursor:pointer;
       transition:transform .16s ease, filter .16s ease, background .16s ease;
       white-space:nowrap;
+      cursor:pointer;
     }
 
     .btn:hover{
@@ -137,15 +140,15 @@
     }
 
     .btn.primary{
-      background:linear-gradient(135deg, var(--brand), var(--brand-dark));
+      background:linear-gradient(135deg,var(--brand),var(--brand-dark));
       color:#04110a;
       box-shadow:0 18px 40px rgba(57,224,111,.20);
     }
 
     .btn.secondary{
       background:rgba(255,255,255,.04);
-      color:var(--text);
       border-color:var(--line);
+      color:var(--text);
     }
 
     .btn.small{
@@ -155,7 +158,7 @@
     }
 
     .hero{
-      padding:38px 0 30px;
+      padding:40px 0 32px;
       display:grid;
       grid-template-columns:1.02fr .98fr;
       gap:28px;
@@ -180,18 +183,18 @@
 
     h1{
       margin:16px 0 14px;
-      font-size:58px;
-      line-height:.96;
-      letter-spacing:-1.6px;
-      max-width:720px;
+      font-size:60px;
+      line-height:.95;
+      letter-spacing:-1.8px;
+      max-width:760px;
     }
 
     .lead{
       margin:0;
-      max-width:700px;
       color:var(--muted);
       font-size:17px;
       line-height:1.8;
+      max-width:700px;
     }
 
     .cta{
@@ -209,7 +212,7 @@
     }
 
     .card{
-      background:var(--card);
+      background:var(--panel);
       border:1px solid var(--line);
       border-radius:var(--radius);
       box-shadow:var(--shadow);
@@ -228,8 +231,8 @@
     .stat .v{
       font-size:20px;
       font-weight:900;
-      margin-bottom:8px;
       line-height:1.15;
+      margin-bottom:8px;
     }
 
     .stat .s{
@@ -241,7 +244,7 @@
 
     .hero-media{
       position:relative;
-      min-height:560px;
+      min-height:580px;
       border-radius:30px;
       overflow:hidden;
       border:1px solid var(--line);
@@ -257,8 +260,8 @@
       position:absolute;
       inset:0;
       background:
-        radial-gradient(900px 300px at 18% 0%, rgba(57,224,111,.18), transparent 58%),
-        linear-gradient(180deg, rgba(5,9,16,.06), rgba(5,9,16,.80));
+        radial-gradient(900px 320px at 18% 0%, rgba(57,224,111,.18), transparent 58%),
+        linear-gradient(180deg, rgba(5,9,16,.06), rgba(5,9,16,.84));
       z-index:0;
     }
 
@@ -285,7 +288,7 @@
       z-index:2;
       padding:20px;
       border-radius:20px;
-      background:rgba(6,11,20,.56);
+      background:rgba(6,11,20,.58);
       border:1px solid rgba(255,255,255,.10);
       backdrop-filter:blur(12px);
     }
@@ -303,7 +306,7 @@
       font-weight:700;
     }
 
-    section{padding:36px 0}
+    section{padding:38px 0}
 
     .section-head{
       display:flex;
@@ -316,13 +319,13 @@
 
     .section-head h2{
       margin:0;
-      font-size:31px;
-      letter-spacing:-.6px;
+      font-size:32px;
+      letter-spacing:-.7px;
     }
 
     .section-head p{
       margin:0;
-      max-width:760px;
+      max-width:780px;
       color:var(--muted);
       line-height:1.7;
     }
@@ -359,7 +362,7 @@
     }
 
     .why-card{
-      background:var(--card);
+      background:var(--panel);
       border:1px solid var(--line);
       border-radius:24px;
       box-shadow:var(--shadow);
@@ -367,9 +370,9 @@
     }
 
     .why-icon{
-      width:48px;
-      height:48px;
-      border-radius:14px;
+      width:50px;
+      height:50px;
+      border-radius:15px;
       display:grid;
       place-items:center;
       background:linear-gradient(135deg, rgba(57,224,111,.20), rgba(57,224,111,.08));
@@ -387,8 +390,8 @@
       margin:0;
       color:var(--muted);
       line-height:1.7;
-      font-weight:700;
       font-size:14px;
+      font-weight:700;
     }
 
     .split{
@@ -451,25 +454,6 @@
       font-weight:700;
     }
 
-    .fleet-grid{
-      display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:16px;
-    }
-
-    .fleet-photo{
-      min-height:420px;
-      border-radius:24px;
-      overflow:hidden;
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
-      background:
-        linear-gradient(180deg, rgba(5,9,16,.10), rgba(5,9,16,.55)),
-        url("7e39f5cc-c442-44bf-894d-0c9c674d460e-1_all_11234.jpg") center center / cover no-repeat;
-    }
-
-    .fleet-panel{display:grid;gap:16px}
-
     .clients-grid{
       display:grid;
       grid-template-columns:repeat(3,1fr);
@@ -477,7 +461,7 @@
     }
 
     .client-card{
-      background:var(--card);
+      background:var(--panel);
       border:1px solid var(--line);
       border-radius:24px;
       box-shadow:var(--shadow);
@@ -497,18 +481,17 @@
       font-size:15px;
       font-weight:900;
       color:#04110a;
-      background:linear-gradient(135deg, #d8dee9, #8fb3ff);
-      box-shadow:0 10px 25px rgba(0,0,0,.20);
       text-align:center;
       line-height:1;
       padding:6px;
+      box-shadow:0 10px 25px rgba(0,0,0,.20);
     }
 
-    .client-logo.ocean{background:linear-gradient(135deg, #7dd3fc, #2563eb)}
-    .client-logo.msd{background:linear-gradient(135deg, #f59e0b, #b45309)}
-    .client-logo.cikis{background:linear-gradient(135deg, #fda4af, #e11d48)}
-    .client-logo.electro{background:linear-gradient(135deg, #67e8f9, #0891b2)}
-    .client-logo.hughes{background:linear-gradient(135deg, #fde68a, #f59e0b)}
+    .client-logo.ocean{background:linear-gradient(135deg,#7dd3fc,#2563eb)}
+    .client-logo.msd{background:linear-gradient(135deg,#f59e0b,#b45309)}
+    .client-logo.cikis{background:linear-gradient(135deg,#fda4af,#e11d48)}
+    .client-logo.electro{background:linear-gradient(135deg,#67e8f9,#0891b2)}
+    .client-logo.hughes{background:linear-gradient(135deg,#fde68a,#f59e0b)}
 
     .client-info h3{
       margin:0 0 6px;
@@ -522,6 +505,25 @@
       line-height:1.65;
       font-weight:700;
     }
+
+    .fleet-grid{
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:16px;
+    }
+
+    .fleet-photo{
+      min-height:430px;
+      border-radius:24px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      background:
+        linear-gradient(180deg, rgba(5,9,16,.12), rgba(5,9,16,.58)),
+        url("7e39f5cc-c442-44bf-894d-0c9c674d460e-1_all_11234.jpg") center center / cover no-repeat;
+    }
+
+    .fleet-panel{display:grid;gap:16px}
 
     .gallery{
       display:grid;
@@ -596,21 +598,6 @@
       gap:16px;
     }
 
-    .contact-grid{
-      display:grid;
-      grid-template-columns:1fr .95fr;
-      gap:16px;
-    }
-
-    .link{
-      color:var(--text);
-      font-weight:900;
-      text-decoration:underline;
-      text-underline-offset:3px;
-      text-decoration-color:rgba(57,224,111,.55);
-      word-break:break-word;
-    }
-
     .quote-banner{
       position:relative;
       min-height:280px;
@@ -631,6 +618,21 @@
       background:rgba(6,11,20,.56);
       border:1px solid rgba(255,255,255,.10);
       backdrop-filter:blur(10px);
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1fr .95fr;
+      gap:16px;
+    }
+
+    .link{
+      color:var(--text);
+      font-weight:900;
+      text-decoration:underline;
+      text-underline-offset:3px;
+      text-decoration-color:rgba(57,224,111,.55);
+      word-break:break-word;
     }
 
     .footer{
@@ -746,24 +748,17 @@
     }
 
     @media (max-width: 1040px){
-      .hero,
-      .fleet-grid,
-      .split,
-      .quote,
-      .contact-grid{
+      .hero,.fleet-grid,.split,.quote,.contact-grid{
         grid-template-columns:1fr;
       }
 
-      .hero-stats,
-      .trust,
-      .why,
-      .clients-grid{
+      .hero-stats,.trust,.why,.clients-grid{
         grid-template-columns:1fr 1fr;
       }
 
       .navlinks{display:none}
       h1{font-size:42px}
-      .hero-media{min-height:380px}
+      .hero-media{min-height:390px}
       .fleet-photo{min-height:320px}
       .span-7,.span-5,.span-4,.span-6{grid-column:span 12}
     }
@@ -771,10 +766,7 @@
     @media (max-width: 640px){
       .wrap{padding:0 16px}
       .nav-inner{padding:12px 16px}
-      .hero-stats,
-      .trust,
-      .why,
-      .clients-grid{
+      .hero-stats,.trust,.why,.clients-grid{
         grid-template-columns:1fr;
       }
       h1{font-size:33px}
@@ -824,8 +816,7 @@
         <h1 data-i18n="hero_title">Transporte profesional de carga con imagen fuerte, operación real y atención directa.</h1>
 
         <p class="lead" data-i18n="hero_lead">
-          En <b>MTZ Cargo LLC</b> movemos carga con presentación profesional, atención directa y enfoque en seguridad.
-          Trabajamos con materiales, equipo y movimientos especializados, manteniendo comunicación clara y servicio confiable desde Houston, Texas.
+          En <b>MTZ Cargo LLC</b> movemos carga con presentación profesional, atención directa y enfoque en seguridad. Trabajamos con materiales, equipo y movimientos especializados, manteniendo comunicación clara y servicio confiable desde Houston, Texas.
         </p>
 
         <div class="cta">
@@ -868,7 +859,7 @@
         <div class="hero-overlay">
           <div class="topline" data-i18n="hero_overlay_title">Transporte profesional • Houston, TX</div>
           <div class="desc" data-i18n="hero_overlay_desc">
-            Esta portada está pensada para que la empresa se vea más fuerte, más seria y más premium desde el primer segundo.
+            Esta portada está diseñada para proyectar fuerza, confianza y una imagen corporativa de alto nivel.
           </div>
         </div>
       </div>
@@ -925,27 +916,9 @@
           <div class="pad">
             <div class="badge" data-i18n="services_badge1">✅ Lo que hacemos</div>
             <ul class="clean">
-              <li>
-                <span class="dot"></span>
-                <div>
-                  <b data-i18n="s1_b">Flatbed y Gooseneck</b>
-                  <div class="muted" data-i18n="s1_p">Servicio para materiales, estructuras, pallets, equipo industrial y movimientos especializados.</div>
-                </div>
-              </li>
-              <li>
-                <span class="dot"></span>
-                <div>
-                  <b data-i18n="s2_b">Amarre y presentación</b>
-                  <div class="muted" data-i18n="s2_p">La carga no solo debe viajar segura; también debe proyectar orden y profesionalismo.</div>
-                </div>
-              </li>
-              <li>
-                <span class="dot"></span>
-                <div>
-                  <b data-i18n="s3_b">Entregas coordinadas</b>
-                  <div class="muted" data-i18n="s3_p">Seguimiento de citas, horarios, destinos y requerimientos específicos del cliente.</div>
-                </div>
-              </li>
+              <li><span class="dot"></span><div><b data-i18n="s1_b">Flatbed y Gooseneck</b><div class="muted" data-i18n="s1_p">Servicio para materiales, estructuras, pallets, equipo industrial y movimientos especializados.</div></div></li>
+              <li><span class="dot"></span><div><b data-i18n="s2_b">Amarre y presentación</b><div class="muted" data-i18n="s2_p">La carga no solo debe viajar segura; también debe proyectar orden y profesionalismo.</div></div></li>
+              <li><span class="dot"></span><div><b data-i18n="s3_b">Entregas coordinadas</b><div class="muted" data-i18n="s3_p">Seguimiento de citas, horarios, destinos y requerimientos específicos del cliente.</div></div></li>
             </ul>
           </div>
         </div>
@@ -954,27 +927,9 @@
           <div class="pad">
             <div class="badge" data-i18n="services_badge2">📌 Ideal para</div>
             <ul class="clean">
-              <li>
-                <span class="dot"></span>
-                <div>
-                  <b data-i18n="i1_b">Industria y construcción</b>
-                  <div class="muted" data-i18n="i1_p">Acero, panel, estructuras, materiales pesados y componentes de trabajo.</div>
-                </div>
-              </li>
-              <li>
-                <span class="dot"></span>
-                <div>
-                  <b data-i18n="i2_b">Equipo y maquinaria</b>
-                  <div class="muted" data-i18n="i2_p">Movimientos donde la seguridad, el tiempo y la imagen del servicio son importantes.</div>
-                </div>
-              </li>
-              <li>
-                <span class="dot"></span>
-                <div>
-                  <b data-i18n="i3_b">Clientes que buscan seriedad</b>
-                  <div class="muted" data-i18n="i3_p">Empresas o personas que valoran puntualidad, trato claro y servicio profesional.</div>
-                </div>
-              </li>
+              <li><span class="dot"></span><div><b data-i18n="i1_b">Industria y construcción</b><div class="muted" data-i18n="i1_p">Acero, panel, estructuras, materiales pesados y componentes de trabajo.</div></div></li>
+              <li><span class="dot"></span><div><b data-i18n="i2_b">Equipo y maquinaria</b><div class="muted" data-i18n="i2_p">Movimientos donde la seguridad, el tiempo y la imagen del servicio son importantes.</div></div></li>
+              <li><span class="dot"></span><div><b data-i18n="i3_b">Clientes que buscan seriedad</b><div class="muted" data-i18n="i3_p">Empresas o personas que valoran puntualidad, trato claro y servicio profesional.</div></div></li>
             </ul>
           </div>
         </div>
@@ -1048,27 +1003,9 @@
             <div class="pad">
               <div class="badge" data-i18n="fleet_badge">🚚 Equipo disponible</div>
               <ul class="clean">
-                <li>
-                  <span class="dot"></span>
-                  <div>
-                    <b data-i18n="f1_b">Remolques Flatbed</b>
-                    <div class="muted" data-i18n="f1_p">Ideales para acero, pallets, estructuras y diferentes materiales de trabajo.</div>
-                  </div>
-                </li>
-                <li>
-                  <span class="dot"></span>
-                  <div>
-                    <b data-i18n="f2_b">Unidades Gooseneck</b>
-                    <div class="muted" data-i18n="f2_p">Excelente opción para equipo, maquinaria y cargas que requieren maniobra especializada.</div>
-                  </div>
-                </li>
-                <li>
-                  <span class="dot"></span>
-                  <div>
-                    <b data-i18n="f3_b">Enfoque en aseguramiento</b>
-                    <div class="muted" data-i18n="f3_p">Atención a la forma en que se asegura la carga para viajar con mayor confianza.</div>
-                  </div>
-                </li>
+                <li><span class="dot"></span><div><b data-i18n="f1_b">Remolques Flatbed</b><div class="muted" data-i18n="f1_p">Ideales para acero, pallets, estructuras y diferentes materiales de trabajo.</div></div></li>
+                <li><span class="dot"></span><div><b data-i18n="f2_b">Unidades Gooseneck</b><div class="muted" data-i18n="f2_p">Excelente opción para equipo, maquinaria y cargas que requieren maniobra especializada.</div></div></li>
+                <li><span class="dot"></span><div><b data-i18n="f3_b">Enfoque en aseguramiento</b><div class="muted" data-i18n="f3_p">Atención a la forma en que se asegura la carga para viajar con mayor confianza.</div></div></li>
               </ul>
             </div>
           </div>
@@ -1146,27 +1083,9 @@
           <div class="pad">
             <div class="badge" data-i18n="quote_badge">📝 Información para cotizar</div>
             <ul class="clean">
-              <li>
-                <span class="dot"></span>
-                <div>
-                  <b data-i18n="q1_b">Origen y destino</b>
-                  <div class="muted" data-i18n="q1_p">Ciudad, estado y fecha de salida estimada.</div>
-                </div>
-              </li>
-              <li>
-                <span class="dot"></span>
-                <div>
-                  <b data-i18n="q2_b">Tipo de carga</b>
-                  <div class="muted" data-i18n="q2_p">Peso, medidas y detalles importantes del material o equipo.</div>
-                </div>
-              </li>
-              <li>
-                <span class="dot"></span>
-                <div>
-                  <b data-i18n="q3_b">Requerimientos especiales</b>
-                  <div class="muted" data-i18n="q3_p">Cita, horario, contacto en sitio o instrucciones adicionales.</div>
-                </div>
-              </li>
+              <li><span class="dot"></span><div><b data-i18n="q1_b">Origen y destino</b><div class="muted" data-i18n="q1_p">Ciudad, estado y fecha de salida estimada.</div></div></li>
+              <li><span class="dot"></span><div><b data-i18n="q2_b">Tipo de carga</b><div class="muted" data-i18n="q2_p">Peso, medidas y detalles importantes del material o equipo.</div></div></li>
+              <li><span class="dot"></span><div><b data-i18n="q3_b">Requerimientos especiales</b><div class="muted" data-i18n="q3_p">Cita, horario, contacto en sitio o instrucciones adicionales.</div></div></li>
             </ul>
 
             <div class="cta" style="margin-top:18px;">
@@ -1223,7 +1142,7 @@
           <div class="pad">
             <div class="badge" data-i18n="contact_badge">⭐ Imagen MTZ Cargo</div>
             <p class="muted" style="margin-top:14px;font-size:15px;line-height:1.75;" data-i18n="contact_note">
-              Esta versión está hecha para que la empresa se vea más fuerte, más seria y con estilo de compañía americana de transporte. Si después me subes los logos oficiales de tus clientes, te los cambio por los reales.
+              Esta versión está hecha para que la empresa se vea más fuerte, más seria y con estilo de compañía americana de transporte.
             </p>
           </div>
         </div>
@@ -1308,7 +1227,7 @@
         stat3_s: "Comunicación directa por teléfono, correo y WhatsApp para mayor confianza.",
         hero_badge: "MTZ CARGO LLC • IMAGEN AMERICANA DE FREIGHT",
         hero_overlay_title: "Transporte profesional • Houston, TX",
-        hero_overlay_desc: "Esta portada está pensada para que la empresa se vea más fuerte, más seria y más premium desde el primer segundo.",
+        hero_overlay_desc: "Esta portada está diseñada para proyectar fuerza, confianza y una imagen corporativa de alto nivel.",
         trust1: "Servicio confiable<span>Imagen limpia, seria y profesional para generar confianza.</span>",
         trust2: "Enfoque en puntualidad<span>Planeación y seguimiento para una operación mejor coordinada.</span>",
         trust3: "Carga segura<span>Cuidado del material y atención en la presentación de la carga.</span>",
@@ -1390,7 +1309,7 @@
         contact_hours_val: "Lunes a Sábado • 8:00 AM – 6:00 PM",
         contact_call: "Llamar ahora",
         contact_badge: "⭐ Imagen MTZ Cargo",
-        contact_note: "Esta versión está hecha para que la empresa se vea más fuerte, más seria y con estilo de compañía americana de transporte. Si después me subes los logos oficiales de tus clientes, te los cambio por los reales.",
+        contact_note: "Esta versión está hecha para que la empresa se vea más fuerte, más seria y con estilo de compañía americana de transporte.",
         footer_text: "Transportation & Logistics",
         wa_text: "Respuesta rápida",
         close_btn: "Cerrar ✕"
@@ -1421,7 +1340,7 @@
         stat3_s: "Direct communication by phone, email and WhatsApp for greater trust.",
         hero_badge: "MTZ CARGO LLC • AMERICAN FREIGHT IMAGE",
         hero_overlay_title: "Professional Transportation • Houston, TX",
-        hero_overlay_desc: "This hero section is designed to make the company look stronger, more serious and more premium from the very first second.",
+        hero_overlay_desc: "This hero section is designed to project strength, trust and a premium corporate image.",
         trust1: "Reliable Service<span>Clean, serious and professional image that builds trust.</span>",
         trust2: "On-Time Focus<span>Planning and follow-up for a better coordinated operation.</span>",
         trust3: "Secure Freight<span>Care for the material and attention to how the load is presented.</span>",
@@ -1503,7 +1422,7 @@
         contact_hours_val: "Monday to Saturday • 8:00 AM – 6:00 PM",
         contact_call: "Call now",
         contact_badge: "⭐ MTZ Cargo Image",
-        contact_note: "This version is designed to make the company look stronger, more serious and styled like an American transportation company. If you later upload your clients’ official logos, I can replace these with the real ones.",
+        contact_note: "This version is designed to make the company look stronger, more serious and styled like an American transportation company.",
         footer_text: "Transportation & Logistics",
         wa_text: "Fast reply",
         close_btn: "Close ✕"
