@@ -9,7 +9,6 @@
   <style>
     :root{
       --bg:#060b14;
-      --bg-soft:#0c1422;
       --card:rgba(10,18,32,.78);
       --line:rgba(255,255,255,.08);
       --text:#f3f7fb;
@@ -35,12 +34,7 @@
 
     a{text-decoration:none;color:inherit}
     img{display:block;max-width:100%}
-
-    .wrap{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:0 24px;
-    }
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
 
     .nav{
       position:sticky;
@@ -120,6 +114,7 @@
       display:flex;
       align-items:center;
       gap:10px;
+      flex-wrap:wrap;
     }
 
     .btn{
@@ -473,9 +468,59 @@
         url("7e39f5cc-c442-44bf-894d-0c9c674d460e-1_all_11234.jpg") center center / cover no-repeat;
     }
 
-    .fleet-panel{
+    .fleet-panel{display:grid;gap:16px}
+
+    .clients-grid{
       display:grid;
+      grid-template-columns:repeat(3,1fr);
       gap:16px;
+    }
+
+    .client-card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:24px;
+      box-shadow:var(--shadow);
+      padding:22px;
+      display:flex;
+      gap:16px;
+      align-items:flex-start;
+    }
+
+    .client-logo{
+      width:58px;
+      height:58px;
+      border-radius:16px;
+      flex:0 0 auto;
+      display:grid;
+      place-items:center;
+      font-size:15px;
+      font-weight:900;
+      color:#04110a;
+      background:linear-gradient(135deg, #d8dee9, #8fb3ff);
+      box-shadow:0 10px 25px rgba(0,0,0,.20);
+      text-align:center;
+      line-height:1;
+      padding:6px;
+    }
+
+    .client-logo.ocean{background:linear-gradient(135deg, #7dd3fc, #2563eb)}
+    .client-logo.msd{background:linear-gradient(135deg, #f59e0b, #b45309)}
+    .client-logo.cikis{background:linear-gradient(135deg, #fda4af, #e11d48)}
+    .client-logo.electro{background:linear-gradient(135deg, #67e8f9, #0891b2)}
+    .client-logo.hughes{background:linear-gradient(135deg, #fde68a, #f59e0b)}
+
+    .client-info h3{
+      margin:0 0 6px;
+      font-size:18px;
+    }
+
+    .client-info p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.65;
+      font-weight:700;
     }
 
     .gallery{
@@ -626,11 +671,7 @@
       flex:0 0 auto;
     }
 
-    .wa-float b{
-      display:block;
-      font-size:14px;
-    }
-
+    .wa-float b{display:block;font-size:14px}
     .wa-float span{
       display:block;
       font-size:12px;
@@ -715,7 +756,8 @@
 
       .hero-stats,
       .trust,
-      .why{
+      .why,
+      .clients-grid{
         grid-template-columns:1fr 1fr;
       }
 
@@ -731,7 +773,8 @@
       .nav-inner{padding:12px 16px}
       .hero-stats,
       .trust,
-      .why{
+      .why,
+      .clients-grid{
         grid-template-columns:1fr;
       }
       h1{font-size:33px}
@@ -756,6 +799,7 @@
       <nav class="navlinks" aria-label="Secciones">
         <a href="#why" data-i18n="nav_why">Why MTZ</a>
         <a href="#services" data-i18n="nav_services">Servicios</a>
+        <a href="#clients" data-i18n="nav_clients">Clientes</a>
         <a href="#fleet" data-i18n="nav_fleet">Flota</a>
         <a href="#gallery" data-i18n="nav_gallery">Galería</a>
         <a href="#contact" data-i18n="nav_contact">Contacto</a>
@@ -764,6 +808,7 @@
       <div class="nav-actions">
         <button class="btn secondary small" id="langToggle">ES / EN</button>
         <a class="btn secondary small" href="mailto:mtztraffic@gmail.com" data-i18n="nav_email">Correo</a>
+        <a class="btn secondary small" href="tel:+12817333949">281-733-3949</a>
         <a class="btn primary small" href="tel:+12817333949" data-i18n="nav_call">Llamar ahora</a>
       </div>
     </div>
@@ -773,9 +818,9 @@
 
     <section class="hero">
       <div>
-        <div class="eyebrow" data-i18n="eyebrow">🇺🇸 <b>Houston, Texas</b> • Flatbed • Gooseneck • Reliable Freight Solutions</div>
+        <div class="eyebrow" data-i18n="eyebrow">🇺🇸 <b>Houston, Texas</b> • Flatbed • Gooseneck • Soluciones de carga confiables</div>
 
-        <h1 data-i18n="hero_title">Professional freight transportation with strong image, real operation and direct service.</h1>
+        <h1 data-i18n="hero_title">Transporte profesional de carga con imagen fuerte, operación real y atención directa.</h1>
 
         <p class="lead" data-i18n="hero_lead">
           En <b>MTZ Cargo LLC</b> movemos carga con presentación profesional, atención directa y enfoque en seguridad.
@@ -785,6 +830,7 @@
         <div class="cta">
           <a class="btn primary" href="#contact" data-i18n="hero_quote">Solicitar cotización</a>
           <a class="btn secondary" href="https://wa.me/12817333949" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn secondary" href="tel:+12817333949">281-733-3949</a>
           <a class="btn secondary" href="mailto:mtztraffic@gmail.com" data-i18n="hero_email">Enviar correo</a>
         </div>
 
@@ -816,9 +862,9 @@
       </div>
 
       <div class="hero-media" role="img" aria-label="Camión MTZ Cargo con imagen principal">
-        <div class="hero-badge" data-i18n="hero_badge">MTZ CARGO LLC • AMERICAN FREIGHT IMAGE</div>
+        <div class="hero-badge" data-i18n="hero_badge">MTZ CARGO LLC • IMAGEN AMERICANA DE FREIGHT</div>
         <div class="hero-overlay">
-          <div class="topline" data-i18n="hero_overlay_title">Professional Transportation • Houston, TX</div>
+          <div class="topline" data-i18n="hero_overlay_title">Transporte profesional • Houston, TX</div>
           <div class="desc" data-i18n="hero_overlay_desc">
             Esta portada está pensada para que la empresa se vea más fuerte, más seria y más premium desde el primer segundo.
           </div>
@@ -828,16 +874,16 @@
 
     <section>
       <div class="trust">
-        <div class="mini" data-i18n="trust1">Reliable Service<span>Imagen limpia, seria y profesional para generar confianza.</span></div>
-        <div class="mini" data-i18n="trust2">On-Time Focus<span>Planeación y seguimiento para una operación mejor coordinada.</span></div>
-        <div class="mini" data-i18n="trust3">Secure Freight<span>Cuidado del material y atención en la presentación de la carga.</span></div>
-        <div class="mini" data-i18n="trust4">Direct Communication<span>Respuesta rápida por llamada, correo y WhatsApp.</span></div>
+        <div class="mini" data-i18n="trust1">Servicio confiable<span>Imagen limpia, seria y profesional para generar confianza.</span></div>
+        <div class="mini" data-i18n="trust2">Enfoque en puntualidad<span>Planeación y seguimiento para una operación mejor coordinada.</span></div>
+        <div class="mini" data-i18n="trust3">Carga segura<span>Cuidado del material y atención en la presentación de la carga.</span></div>
+        <div class="mini" data-i18n="trust4">Comunicación directa<span>Respuesta rápida por llamada, correo y WhatsApp.</span></div>
       </div>
     </section>
 
     <section id="why">
       <div class="section-head">
-        <h2 data-i18n="why_title">Why Choose MTZ Cargo</h2>
+        <h2 data-i18n="why_title">Por qué elegir MTZ Cargo</h2>
         <p data-i18n="why_p">
           No se trata solo de mover carga. Se trata de transmitir confianza, mantener buena comunicación y proyectar una imagen seria frente al cliente desde la primera impresión.
         </p>
@@ -846,19 +892,19 @@
       <div class="why">
         <div class="why-card">
           <div class="why-icon">🚛</div>
-          <h3 data-i18n="why1_h">Real Transportation Operation</h3>
+          <h3 data-i18n="why1_h">Operación real de transporte</h3>
           <p data-i18n="why1_p">Servicio basado en trabajo real de campo, con enfoque práctico en maniobra, coordinación y cumplimiento.</p>
         </div>
 
         <div class="why-card">
           <div class="why-icon">🛡️</div>
-          <h3 data-i18n="why2_h">Secure & Professional Handling</h3>
+          <h3 data-i18n="why2_h">Manejo seguro y profesional</h3>
           <p data-i18n="why2_p">Cada carga debe verse bien, viajar segura y llegar con la presentación adecuada para cuidar la reputación del servicio.</p>
         </div>
 
         <div class="why-card">
           <div class="why-icon">📞</div>
-          <h3 data-i18n="why3_h">Direct Client Communication</h3>
+          <h3 data-i18n="why3_h">Comunicación directa con el cliente</h3>
           <p data-i18n="why3_p">Atención clara y rápida para que el cliente tenga seguimiento, confianza y una experiencia más profesional.</p>
         </div>
       </div>
@@ -933,9 +979,60 @@
       </div>
     </section>
 
+    <section id="clients">
+      <div class="section-head">
+        <h2 data-i18n="clients_title">Clientes que confían en MTZ Cargo</h2>
+        <p data-i18n="clients_p">
+          Empresas industriales, de fabricación y servicios que han trabajado con MTZ Cargo LLC.
+        </p>
+      </div>
+
+      <div class="clients-grid">
+        <div class="client-card">
+          <div class="client-logo ocean">OES</div>
+          <div class="client-info">
+            <h3>Ocean Edge Services, Inc</h3>
+            <p data-i18n="client1_p">Empresa de servicios industriales en Texas incluida dentro de nuestra red de clientes.</p>
+          </div>
+        </div>
+
+        <div class="client-card">
+          <div class="client-logo msd">MSD</div>
+          <div class="client-info">
+            <h3>MSD Building Corporation</h3>
+            <p data-i18n="client2_p">Compañía de acero y estructuras que ha confiado en MTZ Cargo para apoyo logístico.</p>
+          </div>
+        </div>
+
+        <div class="client-card">
+          <div class="client-logo cikis">CSF</div>
+          <div class="client-info">
+            <h3>Cikis Steel Fabricators</h3>
+            <p data-i18n="client3_p">Fabricador de acero estructural y componentes metálicos dentro de nuestra cartera de clientes.</p>
+          </div>
+        </div>
+
+        <div class="client-card">
+          <div class="client-logo electro">ETI</div>
+          <div class="client-info">
+            <h3>Electro-Tech Industries</h3>
+            <p data-i18n="client4_p">Empresa del área de Houston que forma parte de nuestros clientes en servicios y logística.</p>
+          </div>
+        </div>
+
+        <div class="client-card">
+          <div class="client-logo hughes">HFW</div>
+          <div class="client-info">
+            <h3>Hughes Fabrication & Welding</h3>
+            <p data-i18n="client5_p">Compañía de fabricación y soldadura que ha trabajado con MTZ Cargo LLC.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="fleet">
       <div class="section-head">
-        <h2 data-i18n="fleet_title">Our Fleet & Equipment</h2>
+        <h2 data-i18n="fleet_title">Nuestra flota y equipo</h2>
         <p data-i18n="fleet_p">
           Una empresa fuerte se ve mejor cuando muestra su equipo con claridad. Esta sección refuerza imagen, capacidad y confianza.
         </p>
@@ -952,21 +1049,21 @@
                 <li>
                   <span class="dot"></span>
                   <div>
-                    <b data-i18n="f1_b">Flatbed Trailers</b>
+                    <b data-i18n="f1_b">Remolques Flatbed</b>
                     <div class="muted" data-i18n="f1_p">Ideales para acero, pallets, estructuras y diferentes materiales de trabajo.</div>
                   </div>
                 </li>
                 <li>
                   <span class="dot"></span>
                   <div>
-                    <b data-i18n="f2_b">Gooseneck Units</b>
+                    <b data-i18n="f2_b">Unidades Gooseneck</b>
                     <div class="muted" data-i18n="f2_p">Excelente opción para equipo, maquinaria y cargas que requieren maniobra especializada.</div>
                   </div>
                 </li>
                 <li>
                   <span class="dot"></span>
                   <div>
-                    <b data-i18n="f3_b">Securement Focus</b>
+                    <b data-i18n="f3_b">Enfoque en aseguramiento</b>
                     <div class="muted" data-i18n="f3_p">Atención a la forma en que se asegura la carga para viajar con mayor confianza.</div>
                   </div>
                 </li>
@@ -988,7 +1085,7 @@
 
     <section id="gallery">
       <div class="section-head">
-        <h2 data-i18n="gallery_title">Recent Jobs Gallery</h2>
+        <h2 data-i18n="gallery_title">Galería de trabajos recientes</h2>
         <p data-i18n="gallery_p">
           Tus fotos ya están integradas para que la página se sienta real, profesional y conectada con el trabajo de MTZ Cargo.
         </p>
@@ -997,37 +1094,37 @@
       <div class="gallery">
         <div class="g span-7" data-src="1000088208.jpg">
           <img src="1000088208.jpg" alt="Trabajo 1" loading="lazy">
-          <div class="cap"><b data-i18n="g1_b">Imagen principal con bandera</b><span data-i18n="g1_s">Hero image</span></div>
+          <div class="cap"><b data-i18n="g1_b">Imagen principal con bandera</b><span data-i18n="g1_s">Portada</span></div>
         </div>
 
         <div class="g span-5" data-src="20260218_071704.jpg">
           <img src="20260218_071704.jpg" alt="Trabajo 2" loading="lazy">
-          <div class="cap"><b data-i18n="g2_b">Operación en sitio</b><span data-i18n="g2_s">Real work</span></div>
+          <div class="cap"><b data-i18n="g2_b">Operación en sitio</b><span data-i18n="g2_s">Trabajo real</span></div>
         </div>
 
         <div class="g span-4" data-src="1000157831.jpg">
           <img src="1000157831.jpg" alt="Trabajo 3" loading="lazy">
-          <div class="cap"><b data-i18n="g3_b">Movimiento de carga</b><span data-i18n="g3_s">Logistics</span></div>
+          <div class="cap"><b data-i18n="g3_b">Movimiento de carga</b><span data-i18n="g3_s">Logística</span></div>
         </div>
 
         <div class="g span-4" data-src="1000157838%202.jpg">
           <img src="1000157838%202.jpg" alt="Trabajo 4" loading="lazy">
-          <div class="cap"><b data-i18n="g4_b">Carga especializada</b><span data-i18n="g4_s">Securement</span></div>
+          <div class="cap"><b data-i18n="g4_b">Carga especializada</b><span data-i18n="g4_s">Aseguramiento</span></div>
         </div>
 
         <div class="g span-4" data-src="7e39f5cc-c442-44bf-894d-0c9c674d460e-1_all_10653.jpg">
           <img src="7e39f5cc-c442-44bf-894d-0c9c674d460e-1_all_10653.jpg" alt="Trabajo 5" loading="lazy">
-          <div class="cap"><b data-i18n="g5_b">Flatbed operation</b><span data-i18n="g5_s">Field</span></div>
+          <div class="cap"><b data-i18n="g5_b">Operación flatbed</b><span data-i18n="g5_s">Campo</span></div>
         </div>
 
         <div class="g span-6" data-src="7e39f5cc-c442-44bf-894d-0c9c674d460e-1_all_11234.jpg">
           <img src="7e39f5cc-c442-44bf-894d-0c9c674d460e-1_all_11234.jpg" alt="Trabajo 6" loading="lazy">
-          <div class="cap"><b data-i18n="g6_b">Equipment & delivery</b><span data-i18n="g6_s">Service</span></div>
+          <div class="cap"><b data-i18n="g6_b">Equipo y entrega</b><span data-i18n="g6_s">Servicio</span></div>
         </div>
 
         <div class="g span-6" data-src="7e39f5cc-c442-44bf-894d-0c9c674d460e-1_all_27394.jpg">
           <img src="7e39f5cc-c442-44bf-894d-0c9c674d460e-1_all_27394.jpg" alt="Trabajo 7" loading="lazy">
-          <div class="cap"><b data-i18n="g7_b">MTZ Cargo operation</b><span data-i18n="g7_s">Gallery</span></div>
+          <div class="cap"><b data-i18n="g7_b">Operación MTZ Cargo</b><span data-i18n="g7_s">Galería</span></div>
         </div>
       </div>
     </section>
@@ -1036,7 +1133,7 @@
       <div class="quote">
         <div class="quote-banner">
           <div class="overlay">
-            <div style="font-size:15px;font-weight:900;margin-bottom:8px;" data-i18n="quote_title">Request a Quote Today</div>
+            <div style="font-size:15px;font-weight:900;margin-bottom:8px;" data-i18n="quote_title">Solicita una cotización hoy</div>
             <div style="color:#d8e2ee;font-size:13px;line-height:1.6;font-weight:700;" data-i18n="quote_text">
               Una cotización clara y una respuesta rápida hacen que la experiencia del cliente se vea más profesional.
             </div>
@@ -1072,7 +1169,7 @@
 
             <div class="cta" style="margin-top:18px;">
               <a class="btn primary" href="mailto:mtztraffic@gmail.com?subject=Quote%20Request%20-%20MTZ%20Cargo%20LLC&body=Hello,%20I%20would%20like%20a%20quote.%0A%0AOrigin:%0ADestination:%0ADate:%0ACargo%20type:%0AWeight%20and%20dimensions:%0A%0AThank%20you." data-i18n="quote_btn">Pedir cotización</a>
-              <a class="btn secondary" href="https://wa.me/12817333949" target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn secondary" href="tel:+12817333949">281-733-3949</a>
             </div>
           </div>
         </div>
@@ -1092,7 +1189,12 @@
           <div class="pad">
             <b style="font-size:19px;">MTZ Cargo LLC</b>
 
-            <div class="muted" style="margin-top:14px;font-weight:900;" data-i18n="contact_phone">Teléfono</div>
+            <div class="muted" style="margin-top:14px;font-weight:900;" data-i18n="contact_phone1">Teléfono principal</div>
+            <div style="margin-top:6px;">
+              <a class="link" href="tel:+12817333949">281-733-3949</a>
+            </div>
+
+            <div class="muted" style="margin-top:16px;font-weight:900;" data-i18n="contact_phone2">Línea directa</div>
             <div style="margin-top:6px;">
               <a class="link" href="tel:+12817333949">281-733-3949</a>
             </div>
@@ -1115,10 +1217,9 @@
 
         <div class="card">
           <div class="pad">
-            <div class="badge" data-i18n="contact_badge">⭐ MTZ Cargo Image</div>
+            <div class="badge" data-i18n="contact_badge">⭐ Imagen MTZ Cargo</div>
             <p class="muted" style="margin-top:14px;font-size:15px;line-height:1.75;" data-i18n="contact_note">
-              Esta versión está hecha para que la empresa se vea más fuerte, más seria y con estilo de compañía americana de transporte.
-              Después, si quieres, el siguiente paso sería agregar un logo real y una sección bilingüe más comercial.
+              Esta versión está hecha para que la empresa se vea más fuerte, más seria y con estilo de compañía americana de transporte. Si después me subes los logos oficiales de tus clientes, te los cambio por los reales.
             </p>
           </div>
         </div>
@@ -1181,6 +1282,7 @@
         brand_sub: "Transportation • Logistics • Flatbed • Gooseneck",
         nav_why: "Por qué MTZ",
         nav_services: "Servicios",
+        nav_clients: "Clientes",
         nav_fleet: "Flota",
         nav_gallery: "Galería",
         nav_contact: "Contacto",
@@ -1231,6 +1333,13 @@
         i2_p: "Movimientos donde la seguridad, el tiempo y la imagen del servicio son importantes.",
         i3_b: "Clientes que buscan seriedad",
         i3_p: "Empresas o personas que valoran puntualidad, trato claro y servicio profesional.",
+        clients_title: "Clientes que confían en MTZ Cargo",
+        clients_p: "Empresas industriales, de fabricación y servicios que han trabajado con MTZ Cargo LLC.",
+        client1_p: "Empresa de servicios industriales en Texas incluida dentro de nuestra red de clientes.",
+        client2_p: "Compañía de acero y estructuras que ha confiado en MTZ Cargo para apoyo logístico.",
+        client3_p: "Fabricador de acero estructural y componentes metálicos dentro de nuestra cartera de clientes.",
+        client4_p: "Empresa del área de Houston que forma parte de nuestros clientes en servicios y logística.",
+        client5_p: "Compañía de fabricación y soldadura que ha trabajado con MTZ Cargo LLC.",
         fleet_title: "Nuestra flota y equipo",
         fleet_p: "Una empresa fuerte se ve mejor cuando muestra su equipo con claridad. Esta sección refuerza imagen, capacidad y confianza.",
         fleet_badge: "🚚 Equipo disponible",
@@ -1270,13 +1379,14 @@
         quote_btn: "Pedir cotización",
         contact_title: "Contacto",
         contact_p: "Llámanos o escríbenos para revisar tu carga y darte una respuesta rápida con imagen profesional.",
-        contact_phone: "Teléfono",
+        contact_phone1: "Teléfono principal",
+        contact_phone2: "Línea directa",
         contact_emails: "Correos",
         contact_hours: "Horario",
         contact_hours_val: "Lunes a Sábado • 8:00 AM – 6:00 PM",
         contact_call: "Llamar ahora",
         contact_badge: "⭐ Imagen MTZ Cargo",
-        contact_note: "Esta versión está hecha para que la empresa se vea más fuerte, más seria y con estilo de compañía americana de transporte. Después, si quieres, el siguiente paso sería agregar un logo real y una sección bilingüe más comercial.",
+        contact_note: "Esta versión está hecha para que la empresa se vea más fuerte, más seria y con estilo de compañía americana de transporte. Si después me subes los logos oficiales de tus clientes, te los cambio por los reales.",
         footer_text: "Transportation & Logistics",
         wa_text: "Respuesta rápida",
         close_btn: "Cerrar ✕"
@@ -1285,6 +1395,7 @@
         brand_sub: "Transportation • Logistics • Flatbed • Gooseneck",
         nav_why: "Why MTZ",
         nav_services: "Services",
+        nav_clients: "Clients",
         nav_fleet: "Fleet",
         nav_gallery: "Gallery",
         nav_contact: "Contact",
@@ -1335,6 +1446,13 @@
         i2_p: "Moves where safety, timing and service image are important.",
         i3_b: "Clients seeking professionalism",
         i3_p: "Companies or individuals who value punctuality, clear treatment and professional service.",
+        clients_title: "Trusted Clients",
+        clients_p: "Industrial, fabrication and service companies that have worked with MTZ Cargo LLC.",
+        client1_p: "Industrial services company in Texas included as part of our client network.",
+        client2_p: "Steel and structure company that has trusted MTZ Cargo for logistics support.",
+        client3_p: "Structural steel and metal component fabricator included in our client portfolio.",
+        client4_p: "Houston-area company that is part of our service and logistics client base.",
+        client5_p: "Fabrication and welding company that has worked with MTZ Cargo LLC.",
         fleet_title: "Our Fleet & Equipment",
         fleet_p: "A strong company looks better when it clearly shows its equipment. This section reinforces image, capability and trust.",
         fleet_badge: "🚚 Available equipment",
@@ -1374,13 +1492,14 @@
         quote_btn: "Request a quote",
         contact_title: "Contact",
         contact_p: "Call or message us to review your freight and get a fast response with a professional image.",
-        contact_phone: "Phone",
+        contact_phone1: "Main phone",
+        contact_phone2: "Direct line",
         contact_emails: "Emails",
         contact_hours: "Hours",
         contact_hours_val: "Monday to Saturday • 8:00 AM – 6:00 PM",
         contact_call: "Call now",
         contact_badge: "⭐ MTZ Cargo Image",
-        contact_note: "This version is designed to make the company look stronger, more serious and styled like an American transportation company. Later, the next step could be adding a real logo and an even more commercial bilingual section.",
+        contact_note: "This version is designed to make the company look stronger, more serious and styled like an American transportation company. If you later upload your clients’ official logos, I can replace these with the real ones.",
         footer_text: "Transportation & Logistics",
         wa_text: "Fast reply",
         close_btn: "Close ✕"
