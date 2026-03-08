@@ -3,38 +3,37 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Martínez Cargo LLC | Transporte y Logística</title>
-  <meta name="description" content="Martínez Cargo LLC — Transporte y logística especializada en flatbed y gooseneck. Servicio confiable, comunicación clara y entregas a tiempo." />
+  <title>Martínez Cargo LLC | Flatbed • Gooseneck • Logistics</title>
+  <meta name="description" content="Martínez Cargo LLC. Transporte profesional en Houston, TX. Flatbed, gooseneck, logística, amarre seguro y entregas puntuales." />
 
   <style>
     :root{
-      --bg:#0a0f18;
-      --bg-soft:#111827;
-      --card:rgba(15,23,42,.84);
+      --bg:#08101b;
+      --bg2:#0c1624;
+      --card:rgba(10,18,30,.72);
       --line:rgba(148,163,184,.14);
-      --text:#e5e7eb;
-      --muted:#94a3b8;
+      --text:#e8edf5;
+      --muted:#9aa8bb;
       --brand:#22c55e;
-      --brand-dark:#16a34a;
-      --white:#ffffff;
-      --shadow:0 18px 50px rgba(0,0,0,.35);
-      --radius:20px;
-      --max:1180px;
+      --brand2:#16a34a;
+      --shadow:0 24px 70px rgba(0,0,0,.34);
+      --radius:22px;
+      --max:1200px;
     }
 
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
       margin:0;
-      font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,"Noto Sans",sans-serif;
+      font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
       color:var(--text);
       background:
-        radial-gradient(900px 420px at 15% -10%, rgba(34,197,94,.16), transparent 55%),
-        radial-gradient(900px 420px at 100% 0%, rgba(59,130,246,.12), transparent 45%),
-        linear-gradient(180deg, #060912 0%, var(--bg) 100%);
+        radial-gradient(900px 400px at 10% -10%, rgba(34,197,94,.14), transparent 55%),
+        radial-gradient(800px 400px at 100% 0%, rgba(59,130,246,.10), transparent 48%),
+        linear-gradient(180deg, #050811 0%, var(--bg) 100%);
     }
 
-    img{max-width:100%; display:block}
+    img{display:block; max-width:100%}
     a{text-decoration:none; color:inherit}
     .wrap{max-width:var(--max); margin:0 auto; padding:0 24px}
 
@@ -43,7 +42,7 @@
       top:0;
       z-index:50;
       backdrop-filter:blur(14px);
-      background:rgba(6,9,18,.72);
+      background:rgba(5,8,17,.68);
       border-bottom:1px solid var(--line);
     }
 
@@ -65,21 +64,16 @@
     }
 
     .logo{
-      width:42px;
-      height:42px;
-      border-radius:14px;
+      width:46px;
+      height:46px;
+      border-radius:15px;
       display:grid;
       place-items:center;
       font-weight:900;
-      letter-spacing:.5px;
       color:#04110a;
-      background:linear-gradient(135deg, #34d399, #22c55e 55%, #15803d);
-      box-shadow:0 14px 30px rgba(34,197,94,.22);
+      background:linear-gradient(135deg, #4ade80, #22c55e 55%, #15803d);
+      box-shadow:0 14px 30px rgba(34,197,94,.24);
       flex:0 0 auto;
-    }
-
-    .brand-text{
-      min-width:0;
     }
 
     .brand-text .top{
@@ -89,10 +83,10 @@
     }
 
     .brand-text .sub{
-      font-size:12px;
-      color:var(--muted);
-      font-weight:700;
       margin-top:3px;
+      font-size:12px;
+      font-weight:700;
+      color:var(--muted);
     }
 
     .navlinks{
@@ -100,8 +94,8 @@
       align-items:center;
       gap:8px;
       color:var(--muted);
-      font-weight:800;
       font-size:14px;
+      font-weight:800;
     }
 
     .navlinks a{
@@ -115,12 +109,6 @@
       color:var(--text);
     }
 
-    .nav-actions{
-      display:flex;
-      align-items:center;
-      gap:10px;
-    }
-
     .btn{
       display:inline-flex;
       align-items:center;
@@ -130,8 +118,8 @@
       border-radius:14px;
       font-weight:900;
       border:1px solid transparent;
-      transition:transform .15s ease, filter .15s ease, background .15s ease;
       cursor:pointer;
+      transition:transform .15s ease, filter .15s ease, background .15s ease;
       white-space:nowrap;
     }
 
@@ -141,15 +129,15 @@
     }
 
     .btn.primary{
-      background:linear-gradient(135deg, var(--brand), var(--brand-dark));
       color:#04110a;
-      box-shadow:0 18px 44px rgba(34,197,94,.20);
+      background:linear-gradient(135deg, var(--brand), var(--brand2));
+      box-shadow:0 16px 40px rgba(34,197,94,.22);
     }
 
     .btn.secondary{
       background:rgba(148,163,184,.08);
-      border-color:var(--line);
       color:var(--text);
+      border-color:var(--line);
     }
 
     .btn.small{
@@ -159,57 +147,57 @@
     }
 
     .hero{
-      padding:48px 0 22px;
+      padding:42px 0 26px;
       display:grid;
-      grid-template-columns:1.02fr .98fr;
+      grid-template-columns:1.04fr .96fr;
       gap:28px;
       align-items:stretch;
     }
 
     .eyebrow{
       display:inline-flex;
-      align-items:center;
-      gap:10px;
       flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
       padding:10px 14px;
       border-radius:999px;
       border:1px solid var(--line);
-      background:rgba(148,163,184,.07);
+      background:rgba(148,163,184,.06);
       color:var(--muted);
       font-size:13px;
       font-weight:800;
     }
 
-    .eyebrow b{color:var(--white)}
+    .eyebrow b{color:var(--text)}
 
     h1{
       margin:16px 0 12px;
-      font-size:50px;
-      line-height:1.02;
-      letter-spacing:-1px;
-      max-width:700px;
+      font-size:52px;
+      line-height:.98;
+      letter-spacing:-1.3px;
+      max-width:720px;
     }
 
     .lead{
       margin:0;
+      max-width:690px;
       color:var(--muted);
       font-size:17px;
-      line-height:1.75;
-      max-width:680px;
+      line-height:1.78;
     }
 
     .cta{
+      margin-top:24px;
       display:flex;
       flex-wrap:wrap;
       gap:12px;
-      margin-top:24px;
     }
 
     .stats{
+      margin-top:24px;
       display:grid;
       grid-template-columns:repeat(3,1fr);
       gap:16px;
-      margin-top:24px;
     }
 
     .card{
@@ -230,7 +218,7 @@
     }
 
     .stat .value{
-      font-size:20px;
+      font-size:19px;
       font-weight:900;
       margin-bottom:6px;
     }
@@ -239,19 +227,19 @@
       color:var(--muted);
       font-size:13px;
       font-weight:700;
-      line-height:1.5;
+      line-height:1.55;
     }
 
     .hero-media{
       position:relative;
-      min-height:450px;
-      border-radius:26px;
+      min-height:510px;
+      border-radius:28px;
       overflow:hidden;
       border:1px solid var(--line);
       box-shadow:var(--shadow);
       background:
-        linear-gradient(180deg, rgba(5,10,20,.08), rgba(5,10,20,.82)),
-        url("assets/hero.jpg") center center / cover no-repeat;
+        linear-gradient(180deg, rgba(7,10,18,.10), rgba(7,10,18,.76)),
+        url("20260218_071704.jpg") center center / cover no-repeat;
     }
 
     .hero-media::before{
@@ -259,8 +247,8 @@
       position:absolute;
       inset:0;
       background:
-        radial-gradient(800px 280px at 20% 0%, rgba(34,197,94,.22), transparent 55%),
-        linear-gradient(180deg, rgba(7,10,18,.08), rgba(7,10,18,.82));
+        radial-gradient(900px 300px at 15% 0%, rgba(34,197,94,.20), transparent 55%),
+        linear-gradient(180deg, rgba(7,10,18,.04), rgba(7,10,18,.82));
     }
 
     .hero-overlay{
@@ -271,7 +259,7 @@
       z-index:2;
       padding:18px;
       border-radius:18px;
-      background:rgba(7,10,18,.62);
+      background:rgba(7,10,18,.58);
       border:1px solid rgba(255,255,255,.10);
       backdrop-filter:blur(10px);
     }
@@ -283,15 +271,13 @@
     }
 
     .hero-overlay .desc{
-      color:#cbd5e1;
+      color:#d3dbe7;
       font-size:13px;
-      line-height:1.5;
+      line-height:1.55;
       font-weight:700;
     }
 
-    section{
-      padding:34px 0;
-    }
+    section{padding:36px 0}
 
     .section-head{
       display:flex;
@@ -304,15 +290,39 @@
 
     .section-head h2{
       margin:0;
-      font-size:29px;
-      letter-spacing:-.5px;
+      font-size:30px;
+      letter-spacing:-.6px;
     }
 
     .section-head p{
       margin:0;
+      max-width:760px;
       color:var(--muted);
-      line-height:1.65;
-      max-width:720px;
+      line-height:1.68;
+    }
+
+    .trust{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+    }
+
+    .mini{
+      padding:18px;
+      border-radius:18px;
+      border:1px solid var(--line);
+      background:rgba(148,163,184,.05);
+      text-align:center;
+      font-weight:900;
+      color:var(--text);
+    }
+
+    .mini span{
+      display:block;
+      margin-top:6px;
+      color:var(--muted);
+      font-size:13px;
+      font-weight:700;
     }
 
     .two{
@@ -330,26 +340,26 @@
       border:1px solid var(--line);
       background:rgba(148,163,184,.06);
       color:var(--muted);
-      font-weight:900;
       font-size:12px;
+      font-weight:900;
     }
 
-    .clean{
-      list-style:none;
+    ul.clean{
       margin:14px 0 0;
       padding:0;
+      list-style:none;
       display:grid;
       gap:12px;
     }
 
-    .clean li{
+    ul.clean li{
       display:flex;
       gap:12px;
       align-items:flex-start;
       padding:14px;
       border-radius:16px;
       border:1px solid var(--line);
-      background:rgba(148,163,184,.05);
+      background:rgba(148,163,184,.04);
     }
 
     .dot{
@@ -358,8 +368,8 @@
       border-radius:999px;
       margin-top:6px;
       background:var(--brand);
-      flex:0 0 auto;
       box-shadow:0 10px 20px rgba(34,197,94,.25);
+      flex:0 0 auto;
     }
 
     .clean b{
@@ -370,49 +380,25 @@
 
     .muted{
       color:var(--muted);
-      line-height:1.55;
+      line-height:1.56;
       font-size:14px;
       font-weight:700;
     }
 
-    .trust{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:14px;
-    }
-
-    .trust .mini{
-      padding:18px;
-      border-radius:18px;
-      border:1px solid var(--line);
-      background:rgba(148,163,184,.05);
-      text-align:center;
-      font-weight:800;
-      color:#dbe4ef;
-    }
-
-    .trust .mini span{
-      display:block;
-      color:var(--muted);
-      font-size:13px;
-      font-weight:700;
-      margin-top:6px;
-    }
-
     .gallery{
       display:grid;
-      gap:14px;
       grid-template-columns:repeat(12,1fr);
+      gap:14px;
     }
 
     .g{
       position:relative;
-      overflow:hidden;
       border-radius:20px;
+      overflow:hidden;
       border:1px solid var(--line);
-      background:#0f172a;
+      background:#0a1525;
       box-shadow:var(--shadow);
-      min-height:220px;
+      min-height:230px;
       cursor:pointer;
     }
 
@@ -420,8 +406,8 @@
       width:100%;
       height:100%;
       object-fit:cover;
-      transition:transform .28s ease, filter .28s ease;
-      filter:contrast(1.03) saturate(1.05);
+      transition:transform .30s ease, filter .30s ease;
+      filter:contrast(1.03) saturate(1.06);
     }
 
     .g:hover img{
@@ -433,7 +419,7 @@
       content:"";
       position:absolute;
       inset:0;
-      background:linear-gradient(180deg, transparent 48%, rgba(0,0,0,.68));
+      background:linear-gradient(180deg, transparent 50%, rgba(0,0,0,.70));
       pointer-events:none;
     }
 
@@ -455,9 +441,9 @@
     }
 
     .cap span{
-      color:rgba(229,231,235,.78);
       font-size:12px;
       font-weight:900;
+      color:rgba(232,237,245,.78);
       text-align:right;
     }
 
@@ -468,7 +454,7 @@
 
     .coverage-grid{
       display:grid;
-      grid-template-columns:1.2fr .8fr;
+      grid-template-columns:1.15fr .85fr;
       gap:16px;
     }
 
@@ -478,8 +464,8 @@
       gap:16px;
     }
 
-    .contact .link{
-      color:var(--white);
+    .link{
+      color:var(--text);
       font-weight:900;
       text-decoration:underline;
       text-underline-offset:3px;
@@ -488,7 +474,7 @@
     }
 
     .footer{
-      margin-top:8px;
+      margin-top:10px;
       padding:28px 0 50px;
       border-top:1px solid var(--line);
       color:var(--muted);
@@ -507,7 +493,7 @@
       padding:12px 14px;
       border-radius:16px;
       border:1px solid rgba(255,255,255,.10);
-      background:rgba(15,23,42,.82);
+      background:rgba(10,18,30,.82);
       backdrop-filter:blur(10px);
       box-shadow:0 24px 70px rgba(0,0,0,.45);
       transition:transform .15s ease;
@@ -524,16 +510,12 @@
       flex:0 0 auto;
     }
 
-    .wa-float b{
-      font-size:14px;
-      display:block;
-    }
-
+    .wa-float b{display:block; font-size:14px}
     .wa-float span{
-      font-size:12px;
-      color:rgba(229,231,235,.75);
-      font-weight:800;
       display:block;
+      font-size:12px;
+      color:rgba(232,237,245,.76);
+      font-weight:800;
     }
 
     .lightbox{
@@ -542,7 +524,7 @@
       z-index:999;
       display:none;
       place-items:center;
-      background:rgba(0,0,0,.78);
+      background:rgba(0,0,0,.80);
       backdrop-filter:blur(6px);
       padding:20px;
     }
@@ -550,12 +532,12 @@
     .lightbox.show{display:grid}
 
     .lb-card{
-      width:min(1100px,96vw);
+      width:min(1120px,96vw);
       position:relative;
       overflow:hidden;
       border-radius:20px;
       border:1px solid rgba(255,255,255,.10);
-      background:rgba(15,23,42,.96);
+      background:rgba(10,18,30,.96);
       box-shadow:0 30px 90px rgba(0,0,0,.55);
     }
 
@@ -586,7 +568,7 @@
       border-radius:999px;
       border:1px solid rgba(255,255,255,.12);
       background:rgba(0,0,0,.35);
-      color:#e5e7eb;
+      color:#e8edf5;
       font-size:12px;
       font-weight:900;
     }
@@ -594,19 +576,19 @@
     .lb-close{
       pointer-events:auto;
       border:none;
-      border-radius:12px;
       padding:10px 12px;
-      cursor:pointer;
+      border-radius:12px;
       background:rgba(255,255,255,.12);
       color:var(--text);
       font-weight:900;
+      cursor:pointer;
     }
 
     @media (max-width: 980px){
       .hero,
+      .two,
       .coverage-grid,
-      .contact,
-      .two{
+      .contact{
         grid-template-columns:1fr;
       }
 
@@ -615,47 +597,20 @@
         grid-template-columns:1fr 1fr;
       }
 
-      .navlinks{
-        display:none;
-      }
-
-      h1{
-        font-size:38px;
-      }
-
-      .hero-media{
-        min-height:320px;
-      }
-
-      .span-7,.span-5,.span-4,.span-6{
-        grid-column:span 12;
-      }
+      .navlinks{display:none}
+      h1{font-size:38px}
+      .hero-media{min-height:340px}
+      .span-7,.span-5,.span-4,.span-6{grid-column:span 12}
     }
 
     @media (max-width: 640px){
       .wrap{padding:0 16px}
       .nav-inner{padding:12px 16px}
-      .nav-actions{
-        width:100%;
-        justify-content:flex-end;
-      }
-      .stats,
-      .trust{
-        grid-template-columns:1fr;
-      }
-      h1{
-        font-size:32px;
-      }
-      .btn{
-        width:100%;
-      }
-      .cta{
-        flex-direction:column;
-      }
-      .wa-float{
-        right:12px;
-        bottom:12px;
-      }
+      .stats,.trust{grid-template-columns:1fr}
+      h1{font-size:31px}
+      .cta{flex-direction:column}
+      .btn{width:100%}
+      .wa-float{right:12px; bottom:12px}
     }
   </style>
 </head>
@@ -666,7 +621,7 @@
         <div class="logo">MC</div>
         <div class="brand-text">
           <div class="top">Martínez Cargo LLC</div>
-          <div class="sub">Transporte y logística</div>
+          <div class="sub">Transporte y logística profesional</div>
         </div>
       </div>
 
@@ -677,23 +632,20 @@
         <a href="#contacto">Contacto</a>
       </nav>
 
-      <div class="nav-actions">
-        <a class="btn primary small" href="tel:+12817333949">Llamar ahora</a>
-      </div>
+      <a class="btn primary small" href="tel:+12817333949">Llamar ahora</a>
     </div>
   </header>
 
   <main class="wrap">
     <section class="hero">
       <div>
-        <div class="eyebrow">📍 <b>Houston, TX</b> • Flatbed • Gooseneck • Transporte confiable</div>
+        <div class="eyebrow">📍 <b>Houston, TX</b> • Flatbed • Gooseneck • Carga segura</div>
 
-        <h1>Transporte profesional para cargas que requieren seriedad, seguridad y puntualidad.</h1>
+        <h1>Movemos tu carga con imagen profesional, operación real y entregas confiables.</h1>
 
         <p class="lead">
-          En <b>Martínez Cargo LLC</b> movemos materiales, maquinaria y carga especializada con atención directa,
-          comunicación clara y enfoque real en la operación. Nuestro compromiso es ofrecer un servicio confiable,
-          ordenado y a tiempo.
+          En <b>Martínez Cargo LLC</b> trabajamos con atención directa, comunicación clara y enfoque en seguridad.
+          Transportamos materiales, maquinaria y carga especializada con servicio serio, puntual y bien coordinado.
         </p>
 
         <div class="cta">
@@ -705,9 +657,9 @@
         <div class="stats">
           <div class="card">
             <div class="pad stat">
-              <div class="label">Operación</div>
-              <div class="value">Cargas reales</div>
-              <div class="small">Experiencia en amarre, coordinación y manejo responsable de carga.</div>
+              <div class="label">Operación real</div>
+              <div class="value">Trabajo en campo</div>
+              <div class="small">Experiencia en carga, amarre y coordinación de movimientos.</div>
             </div>
           </div>
 
@@ -715,7 +667,7 @@
             <div class="pad stat">
               <div class="label">Equipo</div>
               <div class="value">Flatbed / Gooseneck</div>
-              <div class="small">Listos para transportar materiales, estructuras, maquinaria y equipo.</div>
+              <div class="small">Listos para materiales, estructuras, pallets y equipo industrial.</div>
             </div>
           </div>
 
@@ -723,18 +675,17 @@
             <div class="pad stat">
               <div class="label">Atención</div>
               <div class="value">Seguimiento claro</div>
-              <div class="small">Comunicación directa para que el cliente sepa el estatus de su carga.</div>
+              <div class="small">Comunicación directa por llamada, correo y WhatsApp.</div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="hero-media" role="img" aria-label="Imagen principal de operación de Martínez Cargo">
+      <div class="hero-media" role="img" aria-label="Imagen principal de Martínez Cargo">
         <div class="hero-overlay">
           <div class="topline">Martínez Cargo LLC • Flatbed & Gooseneck</div>
           <div class="desc">
-            Para que esta imagen se vea en la página, el archivo debe estar exactamente como:
-            <b>assets/hero.jpg</b>
+            Ya conecté esta versión a tus imágenes reales del repositorio, sin carpeta assets.
           </div>
         </div>
       </div>
@@ -742,10 +693,10 @@
 
     <section>
       <div class="trust">
-        <div class="mini">Servicio confiable<span>Atención directa y profesional</span></div>
-        <div class="mini">Entrega puntual<span>Planeación y seguimiento</span></div>
+        <div class="mini">Servicio serio<span>Imagen limpia y profesional</span></div>
+        <div class="mini">Puntualidad<span>Planeación y seguimiento</span></div>
         <div class="mini">Carga segura<span>Amarre y cuidado del material</span></div>
-        <div class="mini">Comunicación clara<span>Respuesta rápida por llamada o WhatsApp</span></div>
+        <div class="mini">Respuesta rápida<span>Contacto directo con el cliente</span></div>
       </div>
     </section>
 
@@ -753,8 +704,8 @@
       <div class="section-head">
         <h2>Servicios</h2>
         <p>
-          Trabajamos con enfoque operativo real. Si tu carga requiere coordinación especial,
-          revisamos el detalle y te ayudamos a definir la mejor manera de moverla.
+          Transporte con enfoque operativo real. Si tu carga requiere coordinación especial,
+          revisamos ruta, tipo de material y tiempos para darte la mejor opción.
         </p>
       </div>
 
@@ -766,22 +717,22 @@
               <li>
                 <span class="dot"></span>
                 <div>
-                  <b>Flatbed & Gooseneck</b>
-                  <div class="muted">Transporte de materiales, estructuras, pallets, maquinaria y equipo.</div>
+                  <b>Flatbed y Gooseneck</b>
+                  <div class="muted">Movimiento de materiales, estructuras, pallets, equipo y maquinaria.</div>
                 </div>
               </li>
               <li>
                 <span class="dot"></span>
                 <div>
                   <b>Amarre profesional</b>
-                  <div class="muted">Sujeción responsable de la carga con atención al cuidado del material.</div>
+                  <div class="muted">Carga bien asegurada con atención al cuidado del material y la presentación.</div>
                 </div>
               </li>
               <li>
                 <span class="dot"></span>
                 <div>
-                  <b>Coordinación de entregas</b>
-                  <div class="muted">Seguimiento claro para cargas con cita, horario o instrucciones especiales.</div>
+                  <b>Entregas coordinadas</b>
+                  <div class="muted">Seguimiento para citas, horarios, instrucciones de sitio y comunicación clara.</div>
                 </div>
               </li>
             </ul>
@@ -796,21 +747,21 @@
                 <span class="dot"></span>
                 <div>
                   <b>Industria y construcción</b>
-                  <div class="muted">Acero, panel, componentes, estructuras y materiales pesados.</div>
+                  <div class="muted">Acero, estructuras, panel, materiales y componentes pesados.</div>
                 </div>
               </li>
               <li>
                 <span class="dot"></span>
                 <div>
                   <b>Equipo y maquinaria</b>
-                  <div class="muted">Movimientos donde la seguridad y la puntualidad son prioridad.</div>
+                  <div class="muted">Movimientos donde la seguridad y la puntualidad son clave.</div>
                 </div>
               </li>
               <li>
                 <span class="dot"></span>
                 <div>
-                  <b>Clientes que buscan seriedad</b>
-                  <div class="muted">Atención profesional, comunicación directa y servicio confiable.</div>
+                  <b>Clientes que buscan confianza</b>
+                  <div class="muted">Servicio formal, imagen profesional y comunicación directa.</div>
                 </div>
               </li>
             </ul>
@@ -823,44 +774,44 @@
       <div class="section-head">
         <h2>Galería de trabajos</h2>
         <p>
-          Fotografías reales de operación. Puedes dar click para ver cada imagen en grande.
+          Ya te la dejé conectada con tus fotos reales. Da click en cualquier imagen para verla más grande.
         </p>
       </div>
 
       <div class="gallery">
-        <div class="g span-7" data-src="assets/work1.jpg">
-          <img src="assets/work1.jpg" alt="Trabajo 1" loading="lazy">
-          <div class="cap"><b>Transporte en flatbed</b><span>Operación real</span></div>
+        <div class="g span-7" data-src="20260218_071704.jpg">
+          <img src="20260218_071704.jpg" alt="Trabajo destacado" loading="lazy">
+          <div class="cap"><b>Imagen principal de operación</b><span>Destacado</span></div>
         </div>
 
-        <div class="g span-5" data-src="assets/work2.jpg">
-          <img src="assets/work2.jpg" alt="Trabajo 2" loading="lazy">
+        <div class="g span-5" data-src="1000088208.jpg">
+          <img src="1000088208.jpg" alt="Trabajo 2" loading="lazy">
+          <div class="cap"><b>Transporte y maniobra</b><span>Operación real</span></div>
+        </div>
+
+        <div class="g span-4" data-src="1000157831.jpg">
+          <img src="1000157831.jpg" alt="Trabajo 3" loading="lazy">
+          <div class="cap"><b>Movimiento de carga</b><span>Logística</span></div>
+        </div>
+
+        <div class="g span-4" data-src="1000157838%202.jpg">
+          <img src="1000157838%202.jpg" alt="Trabajo 4" loading="lazy">
           <div class="cap"><b>Carga especializada</b><span>Seguridad</span></div>
         </div>
 
-        <div class="g span-4" data-src="assets/work3.jpg">
-          <img src="assets/work3.jpg" alt="Trabajo 3" loading="lazy">
-          <div class="cap"><b>Equipo industrial</b><span>Amarre</span></div>
+        <div class="g span-4" data-src="7e39f5cc-c442-44bf-894d-0c9c674d460e-1_all_10653.jpg">
+          <img src="7e39f5cc-c442-44bf-894d-0c9c674d460e-1_all_10653.jpg" alt="Trabajo 5" loading="lazy">
+          <div class="cap"><b>Trabajo en campo</b><span>Flatbed</span></div>
         </div>
 
-        <div class="g span-4" data-src="assets/work4.jpg">
-          <img src="assets/work4.jpg" alt="Trabajo 4" loading="lazy">
-          <div class="cap"><b>Estructuras y materiales</b><span>Logística</span></div>
+        <div class="g span-6" data-src="7e39f5cc-c442-44bf-894d-0c9c674d460e-1_all_11234.jpg">
+          <img src="7e39f5cc-c442-44bf-894d-0c9c674d460e-1_all_11234.jpg" alt="Trabajo 6" loading="lazy">
+          <div class="cap"><b>Entrega y coordinación</b><span>Seguimiento</span></div>
         </div>
 
-        <div class="g span-4" data-src="assets/work5.jpg">
-          <img src="assets/work5.jpg" alt="Trabajo 5" loading="lazy">
-          <div class="cap"><b>Carga en pallets</b><span>Transporte</span></div>
-        </div>
-
-        <div class="g span-6" data-src="assets/work6.jpg">
-          <img src="assets/work6.jpg" alt="Trabajo 6" loading="lazy">
-          <div class="cap"><b>Movimientos de equipo</b><span>Campo</span></div>
-        </div>
-
-        <div class="g span-6" data-src="assets/hero.jpg">
-          <img src="assets/hero.jpg" alt="Imagen destacada" loading="lazy">
-          <div class="cap"><b>Imagen destacada</b><span>Martínez Cargo</span></div>
+        <div class="g span-6" data-src="7e39f5cc-c442-44bf-894d-0c9c674d460e-1_all_27394.jpg">
+          <img src="7e39f5cc-c442-44bf-894d-0c9c674d460e-1_all_27394.jpg" alt="Trabajo 7" loading="lazy">
+          <div class="cap"><b>Imagen de operación</b><span>Martínez Cargo</span></div>
         </div>
       </div>
     </section>
@@ -870,7 +821,7 @@
         <h2>Cobertura</h2>
         <p>
           Base en Houston, Texas. Disponibilidad para rutas locales, regionales y foráneas
-          según agenda, tipo de carga y requerimientos del servicio.
+          según el tipo de carga, agenda y requerimientos del cliente.
         </p>
       </div>
 
@@ -879,28 +830,28 @@
           <div class="pad">
             <div class="badge">🗺️ Área de operación</div>
             <p class="lead" style="margin-top:14px; font-size:16px">
-              Atendemos salidas desde Houston y coordinamos movimientos según la necesidad del cliente.
-              Si manejas rutas frecuentes, se pueden agregar aquí para que la página se vea todavía más profesional.
+              Salidas desde Houston con enfoque en servicio puntual, comunicación clara y atención profesional.
+              Si después quieres, te personalizo esta parte con tus rutas frecuentes para que se vea todavía más fuerte.
             </p>
           </div>
         </div>
 
         <div class="card">
           <div class="pad">
-            <div class="badge">⭐ Enfoque</div>
+            <div class="badge">⭐ Compromiso</div>
             <ul class="clean">
               <li>
                 <span class="dot"></span>
                 <div>
                   <b>Planeación</b>
-                  <div class="muted">Organización clara antes de mover la carga.</div>
+                  <div class="muted">Revisión clara antes de mover la carga.</div>
                 </div>
               </li>
               <li>
                 <span class="dot"></span>
                 <div>
-                  <b>Puntualidad</b>
-                  <div class="muted">Atención al horario y compromiso de entrega.</div>
+                  <b>Presentación profesional</b>
+                  <div class="muted">Imagen seria para generar confianza al cliente.</div>
                 </div>
               </li>
             </ul>
@@ -913,7 +864,7 @@
       <div class="section-head">
         <h2>Contacto</h2>
         <p>
-          Llámanos o escríbenos para revisar tu carga y prepararte una cotización.
+          Llámanos o escríbenos para revisar tu carga y prepararte una cotización rápida.
         </p>
       </div>
 
@@ -927,7 +878,7 @@
               <a class="link" href="tel:+12817333949">281-733-3949</a>
             </div>
 
-            <div class="muted" style="margin-top:16px; font-weight:900">Correo</div>
+            <div class="muted" style="margin-top:16px; font-weight:900">Correos</div>
             <div style="margin-top:6px; display:grid; gap:6px">
               <a class="link" href="mailto:mtztraffic@gmail.com">mtztraffic@gmail.com</a>
               <a class="link" href="mailto:mtz.transportation@hotmail.com">mtz.transportation@hotmail.com</a>
@@ -945,27 +896,27 @@
 
         <div class="card">
           <div class="pad">
-            <div class="badge">📝 Información para cotizar</div>
+            <div class="badge">📝 Para cotizar</div>
             <ul class="clean">
               <li>
                 <span class="dot"></span>
                 <div>
                   <b>Origen y destino</b>
-                  <div class="muted">Ciudad, estado y fecha estimada de salida.</div>
+                  <div class="muted">Ciudad, estado y fecha de salida.</div>
                 </div>
               </li>
               <li>
                 <span class="dot"></span>
                 <div>
                   <b>Tipo de carga</b>
-                  <div class="muted">Peso, medidas y características generales.</div>
+                  <div class="muted">Peso, medidas y detalles importantes del material.</div>
                 </div>
               </li>
               <li>
                 <span class="dot"></span>
                 <div>
-                  <b>Requerimientos especiales</b>
-                  <div class="muted">Cita, horario, contacto en sitio o instrucciones adicionales.</div>
+                  <b>Condiciones especiales</b>
+                  <div class="muted">Horario, cita, contacto en sitio o requerimientos adicionales.</div>
                 </div>
               </li>
             </ul>
